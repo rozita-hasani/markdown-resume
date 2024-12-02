@@ -1,0 +1,41 @@
+@import "print.css";
+@import "themes/tehran.css";
+@import "themes/isfahan.css";
+@import "themes/shiraz.css";
+@import "themes/mashhad.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Global Variables */
+:root {
+    --fontScale: 1;
+    --lineHeightScale: 1.5;
+    --paddingScale: 20px;
+}
+
+.previewContainer {
+    padding: var(--paddingScale);
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #c0bcbc;
+}
