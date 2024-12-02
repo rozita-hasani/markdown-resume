@@ -1,0 +1,50 @@
+@media print {
+    body {
+        background: white !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    html, body {
+        height: auto !important;
+    }
+
+    .main-content {
+        padding: 0 !important;
+        overflow: visible !important;
+        display: block;
+        flex-grow: initial;
+        margin: 0;
+        height: auto !important;
+    }
+
+    .editor, .sidebar {
+        display: none !important;
+    }
+
+    .previewContainer {
+        width: 100% !important;
+        border: none !important;
+        background: white;
+        height: auto !important;
+        margin: 0 !important;
+        page-break-inside: auto;
+        overflow: visible !important;
+    }
+
+    .previewContainer > * {
+        page-break-inside: avoid;
+        page-break-before: auto;
+        page-break-after: auto;
+    }
+
+    .previewContent p, .previewContent h1, .previewContent h2, .previewContent h3, .previewContent div {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+
+    @page {
+         margin: 24px 0;
+    }
+}
