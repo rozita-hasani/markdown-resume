@@ -15,13 +15,14 @@ interface SidebarProps {
     fontScale: number;
     lineHeightScale: number;
     paddingScale: number;
+    selectedTheme: string;
 }
 
-const Sidebar = ({handlePrint, onThemeChange, onFontSizeChange, onLineHeightChange, onPaddingChange, onFontChange, fontScale, lineHeightScale, paddingScale}: SidebarProps) => {
+const Sidebar = ({handlePrint, onThemeChange, onFontSizeChange, onLineHeightChange, onPaddingChange, onFontChange, fontScale, lineHeightScale, paddingScale, selectedTheme}: SidebarProps) => {
     return (
         <div className="sidebar flex flex-col justify-between fixed right-0 top-0 bottom-0 max-w-[300px] w-full bg-white py-6 ml-10 border border-gray-200 overflow-auto">
             <div>
-                <ThemeSection onThemeChange={onThemeChange}/>
+                <ThemeSection onThemeChange={onThemeChange} selectedTheme={selectedTheme}/>
                 <FontSection onFontChangeAction={onFontChange} onFontSizeChangeAction={onFontSizeChange} fontScale={fontScale}/>
                 <LayoutSection onLineHeightChangeAction={onLineHeightChange} onPaddingChangeAction={onPaddingChange} lineHeightScale={lineHeightScale} paddingScale={paddingScale}/>
             </div>

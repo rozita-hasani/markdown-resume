@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import {svgPaths} from "@/lib/constants";
 import Logo from "@/components/Logo";
+import {ThemeList} from "@/lib/constants";
 
 export default function Home() {
     return (
@@ -56,7 +56,9 @@ export default function Home() {
                     <p className="text-gray-600 text-lg mt-2">Choose one of the templates below to get started on your resume.</p>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between gap-8">
-                    {["tehran", "isfahan", "shiraz", "mashhad"].map((template) => (<TemplateCard key={template} template={template}/>))}
+                    {Object.keys(ThemeList).map((template) => (
+                        <TemplateCard key={template} template={template} />
+                    ))}
                 </div>
             </section>
 
@@ -96,11 +98,11 @@ function Feature({title, description, icon}: FeatureProps) {
 // Template Card Component for Templates Section
 function TemplateCard({template}: { template: string }) {
     return (
-        <div className="p-2 flex flex-col justify-center md:mx-0 rounded-lg hover:shadow-xl transition cursor-pointer">
-            <Image src={`/screenshots/${template}-resume.jpg`} alt={`${template} Template`} width={300} height={200} className="mb-1 rounded-lg border" />
-            <Link href={`/editor?template=${template}`} className="block text-[#1a73e8] hover:underline font-semibold">
-                {template.charAt(0).toUpperCase() + template.slice(1)}
-            </Link>
-        </div>
+        <a href={`/editor?template=${template}`}>
+            <div className="p-2 flex flex-col justify-center md:mx-0 rounded-lg hover:shadow-xl transition cursor-pointer">
+                <Image src={`/screenshots/${template}-resume.jpg`} alt={`${template} Template`} width={300} height={200} className="mb-1 rounded-lg border"/>
+                <span className="block text-[#1a73e8] hover:underline font-semibold">{ThemeList[template as keyof typeof ThemeList]}</span>
+            </div>
+        </a>
     );
 }

@@ -21,7 +21,7 @@ function EditorPageContent() {
     const template = searchParams.get("template");
 
     const [markdown, setMarkdown] = useState<string>();
-    const [theme, setTheme] = useState<string>("Tehran");
+    const [theme, setTheme] = useState<string>(template ?? "Tehran");
     const [fontScale, setFontScale] = useState<number>(1);
     const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
     const [paddingScale, setPaddingScale] = useState<number>(24);
@@ -32,12 +32,13 @@ function EditorPageContent() {
     // Fetch the template and set the markdown state
     useEffect(() => {
         if (template) {
-            fetch(template)
+            fetch(`/resumes/${template}.md`)
                 .then((res) => {
                     if (!res.ok) {
                         setMarkdown("Unable to load the template from the given URL.");
                     } else {
                         res.text().then(setMarkdown);
+                        setTheme(template)
                     }
                 })
                 .catch(() => {
@@ -83,6 +84,7 @@ function EditorPageContent() {
                 fontScale={fontScale}
                 lineHeightScale={lineHeightScale}
                 paddingScale={paddingScale}
+                selectedTheme={theme}
             />
         </div>
     );

@@ -40,3 +40,10 @@ export const themes: { [key: string]: ThemeProps } = {
         fontName: "'Work Sans', 'Inter', 'Noto Sans SC', sans-serif"
     }
 };
+
+export enum ThemeList {
+    tehran = 'Tehran',
+    isfahan = 'Isfahan',
+    shiraz = 'Shiraz',
+    mashhad = 'Mashhad',
+}
