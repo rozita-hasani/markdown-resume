@@ -1,0 +1,96 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&display=swap');
+
+/* Mashhad Theme Styles */
+.theme.mashhad {
+    font-family: "Nunito", "Inter", 'Noto Sans SC';
+    font-size: calc(16px * var(--fontScale));
+    line-height: var(--lineHeightScale);
+    color: #444;
+}
+
+.theme.mashhad h1, .theme.mashhad h2, .theme.mashhad h3, .theme.mashhad h4, .theme.mashhad h5, .theme.mashhad h6 {
+    font-family: "Inika", "Inter", 'Noto Sans SC';
+}
+
+.theme.mashhad h1 {
+    color: #222;
+    font-weight: 800;
+    font-size: calc(2.5rem * var(--fontScale));
+    margin-top: 0;
+    text-align: left;
+}
+
+.theme.mashhad h2 {
+    display: flex;
+    position: relative;
+    color: #222;
+    font-weight: 600;
+    font-size: calc(1.5rem * var(--fontScale));
+    margin-top: 0.5em;
+}
+
+.theme.mashhad h2:after {
+    align-self: end;
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    margin-bottom: 1rem;
+    margin-left: 4px;
+}
+
+.theme.mashhad h3 {
+    color: #016ef1;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: calc(1.25rem * var(--fontScale));
+}
+
+.theme.mashhad h3 + p {
+    margin-top: .2rem;
+}
+
+.theme.mashhad p {
+    margin-top: .5rem;
+}
+
+.theme.mashhad a {
+    color: #222;
+    border-bottom: 1px dashed;
+    text-decoration: none !important;
+}
+
+.theme.mashhad hr {
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+}
+
+.theme.mashhad strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.theme.mashhad em {
+    font-style: italic;
+    color: #444;
+}
+
+.theme.mashhad ul {
+    padding-left: 12px;
+    margin-top: .5em;
+    list-style-type: none;
+}
+
+.theme.mashhad ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.theme.mashhad ul li:before {
+    color: #016ef1;
+    font-family: "Overpass Mono";
+    font-weight: 700;
+    content: "*";
+    left: -12px;
+    position: absolute;
+}

@@ -1,0 +1,79 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&family=Nunito:wght@400;700&family=Overpass+Mono:wght@400;700&family=Poppins:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
+
+/* Shiraz Theme Styles */
+.theme.shiraz {
+    font-family: "Work Sans", "Inter", 'Noto Sans SC';
+    font-size: calc(16px * var(--fontScale));
+    line-height: var(--lineHeightScale);
+    color: #222;
+}
+
+.theme.shiraz h1, .theme.shiraz h2, .theme.shiraz h3, .theme.shiraz h4, .theme.shiraz h5, .theme.shiraz h6 {
+    font-family: "Poppins", "Inter", 'Noto Sans SC';
+}
+
+.theme.shiraz h1 {
+    font-weight: normal;
+    font-size: calc(2.25rem * var(--fontScale));
+    margin-top: 0;
+    text-align: left;
+}
+
+.theme.shiraz h2 {
+    border-bottom: 1px dashed #016ef1;
+    font-weight: 700;
+    font-size: calc(1.5rem * var(--fontScale));
+    margin-top: 0.5em;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.theme.shiraz h3 {
+    font-size: calc(1.25rem * var(--fontScale));
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+.theme.shiraz p {
+    margin-top: .5rem;
+}
+
+.theme.shiraz a {
+    color: #222;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.theme.shiraz hr {
+    border-top: 1px dashed #016ef1;
+    margin: 1em 0;
+}
+
+.theme.shiraz strong {
+    font-weight: 500;
+}
+
+.theme.shiraz em {
+    font-style: italic;
+}
+
+.theme.shiraz ul {
+    padding-left: 16px;
+    margin-top: .5em;
+    list-style-type: none;
+}
+
+.theme.shiraz ul li {
+    list-style-type: none;
+    position: relative;
+}
+
+.theme.shiraz ul li:before {
+    font-weight: bold;
+    content: '-';
+    left: -16px;
+    position: absolute;
+    margin-right: .5em;
+}

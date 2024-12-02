@@ -1,0 +1,73 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Inter:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap');
+
+/* Isfahan Theme Styles */
+.theme.isfahan {
+    font-family: "Karla", "Inter", "Noto Sans SC";
+    font-size: calc(18px * var(--fontScale));
+    line-height: var(--lineHeightScale);
+    color: #222;
+}
+
+.theme.isfahan h1 {
+    font-weight: normal;
+    font-size: calc(2.25rem * var(--fontScale));
+    margin-top: 0;
+    text-align: left;
+}
+
+.theme.isfahan h2 {
+    color: #016ef1;
+    text-transform: uppercase;
+    font-size: calc(1.5rem * var(--fontScale));
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.theme.isfahan h3 {
+    font-size: calc(1.25rem * var(--fontScale));
+    margin-top: .5em;
+    font-weight: bold;
+}
+
+.theme.isfahan p {
+    margin-top: .5rem;
+}
+
+.theme.isfahan a {
+    border-bottom: 1px dotted;
+    text-decoration: none;
+}
+
+.theme.isfahan strong {
+    font-weight: bold;
+}
+
+.theme.isfahan em {
+    font-style: italic;
+}
+
+.theme.isfahan ul {
+    margin-top: .5em;
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.theme.isfahan ul li {
+    position: relative;
+}
+
+.theme.isfahan ul li:before {
+    content: "◦";
+    color: #016ef1;
+    font-family: "Inter";
+    left: -1em;
+    position: absolute;
+    font-weight: bold;
+}
+
+.theme.isfahan hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+}
