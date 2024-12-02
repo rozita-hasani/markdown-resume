@@ -15,7 +15,6 @@ Resume Markdown is an open-source project that helps users create professional r
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
-- [Firebase](https://console.firebase.google.com/)
 - [React DOM](https://reactjs.org/docs/react-dom.html)
 - [React Markdown](https://github.com/remarkjs/react-markdown)
 - [MDXEditor](https://github.com/mdxeditor/editor)
@@ -25,9 +24,9 @@ Resume Markdown is an open-source project that helps users create professional r
 ## Screenshots
 Here are some examples of resumes created with this tool:
 
-| ![Resume Example](/screenshots/mashhad-resume.jpg) | ![Resume Example](screenshots/isfahan-resume.jpg) |
-|-----------------------------------------------|----------------------------------------------|
-| ![Resume Example](/screenshots/tehran-resume.jpg)  | ![Resume Example](/screenshots/shiraz-resume.jpg) |
+| ![Resume Example](/public/screenshots/mashhad-resume.jpg) | ![Resume Example](/public/screenshots/isfahan-resume.jpg) |
+|-----------------------------------------------------------|-----------------------------------------------------------|
+| ![Resume Example](/public/screenshots/tehran-resume.jpg)  | ![Resume Example](/public/screenshots/shiraz-resume.jpg)  |
 
 ## Quick Start
 To run the project locally:
