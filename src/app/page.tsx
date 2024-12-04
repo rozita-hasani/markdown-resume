@@ -30,7 +30,7 @@ export default function Home() {
 
         {/* Features Section */}
             <section className="bg-white">
-                <div className="container grid grid-cols-3 items-center mx-auto gap-8 p-8">
+                <div className="container lg:grid lg:grid-cols-3 items-center mx-auto gap-8 p-8">
                     <Feature
                         title="Easy Editing"
                         description="Simple and quick resume editing using the built-in editor without needing any technical skills."
@@ -55,9 +55,9 @@ export default function Home() {
                     <h2 className="text-3xl text-gray-900 tracking-tight font-medium">Resume Templates</h2>
                     <p className="text-gray-600 text-lg mt-2">Choose one of the templates below to get started on your resume.</p>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between gap-8">
+                <div className="flex flex-col md:flex-row justify-between">
                     {Object.keys(ThemeList).map((template) => (
-                        <TemplateCard key={template} template={template} />
+                        <TemplateCard template={template} />
                     ))}
                 </div>
             </section>
@@ -83,7 +83,7 @@ interface FeatureProps {
 
 function Feature({title, description, icon}: FeatureProps) {
     return (
-        <div className="flex flex-col p-6 border rounded-lg justify-center h-full">
+        <div className="flex flex-col p-6 border rounded-lg justify-center h-full mb-8 lg:mb-0">
             <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#1a73e8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`lucide lucide-${icon}`}>
                     {svgPaths[icon]}
@@ -98,8 +98,8 @@ function Feature({title, description, icon}: FeatureProps) {
 // Template Card Component for Templates Section
 function TemplateCard({template}: { template: string }) {
     return (
-        <a href={`/editor?template=${template}`}>
-            <div className="p-2 flex flex-col justify-center md:mx-0 rounded-lg hover:shadow-xl transition cursor-pointer">
+        <a key={template} href={`/editor?template=${template}`}>
+            <div className="p-2 flex flex-col justify-center md:mx-0 rounded-lg hover:shadow-xl transition cursor-pointer w-fit right-0 left-0 mx-auto">
                 <Image src={`/screenshots/${template}-resume.png`} alt={`${template} Template`} width={300} height={200} className="mb-1 rounded-lg border"/>
                 <span className="block text-[#1a73e8] font-semibold">{ThemeList[template as keyof typeof ThemeList]}</span>
             </div>
