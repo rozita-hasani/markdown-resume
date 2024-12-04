@@ -24,9 +24,9 @@ Resume Markdown is an open-source project that helps users create professional r
 ## Screenshots
 Here are some examples of resumes created with this tool:
 
-| ![Resume Example](/public/screenshots/mashhad-resume.jpg) | ![Resume Example](/public/screenshots/isfahan-resume.jpg) |
+| ![Resume Example](/public/screenshots/mashhad-resume.png) | ![Resume Example](/public/screenshots/isfahan-resume.png) |
 |-----------------------------------------------------------|-----------------------------------------------------------|
-| ![Resume Example](/public/screenshots/tehran-resume.jpg)  | ![Resume Example](/public/screenshots/shiraz-resume.jpg)  |
+| ![Resume Example](/public/screenshots/tehran-resume.png)  | ![Resume Example](/public/screenshots/shiraz-resume.png)  |
 
 ## Quick Start
 To run the project locally:
