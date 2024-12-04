@@ -31,7 +31,7 @@ function EditorPageContent() {
     const [textColor, setTextColor] = useState<string>("#000000");
     const [linkColor, setLinkColor] = useState<string>("#1a73e8");
 
-    const previewContainerRef = useRef<HTMLDivElement>(null);
+    const previewContainerRef = useRef<HTMLDivElement | null>(null);
 
     // Fetch the template and set the markdown state
     useEffect(() => {
