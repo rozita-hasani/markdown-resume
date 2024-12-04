@@ -6,7 +6,7 @@
     font-family: 'Inter', 'Noto Sans SC';
     font-size: calc(16px * var(--fontScale));
     line-height: var(--lineHeightScale);
-    color: #444;
+    color: var(--textColor, #444);
 }
 
 .theme.tehran h1 {
@@ -14,18 +14,19 @@
     font-size: calc(2.25rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
+    color: var(--headerColor, #222);
 }
 
 .theme.tehran h2 {
     position: relative;
-    color: #222;
+    color: var(--headerColor, #222);
     font-weight: 600;
     font-size: calc(1.5rem * var(--fontScale));
     margin-top: 0.5em;
 }
 
 .theme.tehran h2:before {
-    background-color: #016ef1;
+    background-color: var(--linkColor, #016ef1);
     bottom: -2px;
     content: '';
     height: 3px;
@@ -36,21 +37,22 @@
 
 .theme.tehran h3 {
     font-size: calc(1.25rem * var(--fontScale));
-    color: #222;
+    color: var(--headerColor, #222);
     margin-top: 0.5em;
     font-weight: 600;
 }
 
 .theme.tehran h3 + p {
-    margin-top: .2rem;
+    margin-top: 0.2rem;
 }
 
 .theme.tehran p {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
+    color: var(--textColor, #444);
 }
 
 .theme.tehran a {
-    color: #222;
+    color: var(--linkColor, #222);
     text-decoration: underline;
     font-weight: 600;
 }
@@ -61,32 +63,33 @@
 }
 
 .theme.tehran strong {
-    color: #222;
+    color: var(--textColor, #222);
     font-weight: 600;
 }
 
 .theme.tehran em {
     font-style: italic;
-    color: #444;
+    color: var(--textColor, #444);
 }
 
 .theme.tehran ul {
     padding-left: 12px;
-    margin-top: .5em;
+    margin-top: 0.5em;
     list-style-type: none;
 }
 
 .theme.tehran ul li {
     list-style-type: none;
     position: relative;
+    color: var(--textColor, #444);
 }
 
 .theme.tehran ul li:before {
-    color: #016ef1;
+    color: var(--linkColor, #016ef1);
     font-family: 'Inter';
     font-weight: 600;
     content: '•';
     left: -12px;
     position: absolute;
-    margin-right: .5em;
+    margin-right: 0.5em;
 }

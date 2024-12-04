@@ -6,7 +6,7 @@
     font-family: "Nunito", "Inter", 'Noto Sans SC';
     font-size: calc(16px * var(--fontScale));
     line-height: var(--lineHeightScale);
-    color: #444;
+    color: var(--textColor, #444);
 }
 
 .theme.mashhad h1, .theme.mashhad h2, .theme.mashhad h3, .theme.mashhad h4, .theme.mashhad h5, .theme.mashhad h6 {
@@ -14,23 +14,24 @@
 }
 
 .theme.mashhad h1 {
-    color: #222;
     font-weight: 800;
     font-size: calc(2.5rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
+    color: var(--headerColor, #222);
 }
 
 .theme.mashhad h2 {
     display: flex;
     position: relative;
-    color: #222;
+    color: var(--headerColor, #222);
     font-weight: 600;
     font-size: calc(1.5rem * var(--fontScale));
     margin-top: 0.5em;
 }
 
 .theme.mashhad h2:after {
+    color: var(--headerColor);
     align-self: end;
     content: '';
     flex-grow: 1;
@@ -40,7 +41,7 @@
 }
 
 .theme.mashhad h3 {
-    color: #016ef1;
+    color: var(--headerColor, #016ef1);
     margin-top: 0.5rem;
     font-weight: 600;
     font-size: calc(1.25rem * var(--fontScale));
@@ -52,10 +53,11 @@
 
 .theme.mashhad p {
     margin-top: .5rem;
+    color: var(--textColor);
 }
 
 .theme.mashhad a {
-    color: #222;
+    color: var(--linkColor, #222);
     border-bottom: 1px dashed;
     text-decoration: none !important;
 }
@@ -66,13 +68,13 @@
 }
 
 .theme.mashhad strong {
-    color: #222;
+    color: var(--textColor, #222);
     font-weight: 600;
 }
 
 .theme.mashhad em {
     font-style: italic;
-    color: #444;
+    color: var(--textColor, #444);
 }
 
 .theme.mashhad ul {
@@ -84,10 +86,11 @@
 .theme.mashhad ul li {
     list-style-type: none;
     position: relative;
+    color: var(--textColor);
 }
 
 .theme.mashhad ul li:before {
-    color: #016ef1;
+    color: var(--linkColor, #016ef1);
     font-family: "Overpass Mono";
     font-weight: 700;
     content: "*";

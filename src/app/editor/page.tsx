@@ -26,6 +26,9 @@ function EditorPageContent() {
     const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
     const [paddingScale, setPaddingScale] = useState<number>(24);
     const [font, setFont] = useState<string>("'Inter', 'Noto Sans SC', sans-serif");
+    const [headerColor, setHeaderColor] = useState<string>("#000000");
+    const [textColor, setTextColor] = useState<string>("#000000");
+    const [linkColor, setLinkColor] = useState<string>("#1a73e8");
 
     const previewContainerRef = useRef<HTMLDivElement>(null);
 
@@ -54,8 +57,11 @@ function EditorPageContent() {
             previewContainer.style.setProperty('--fontScale', fontScale.toString());
             previewContainer.style.setProperty('--lineHeightScale', lineHeightScale.toString());
             previewContainer.style.setProperty('--paddingScale', `${paddingScale}px`);
+            previewContainer.style.setProperty("--headerColor", headerColor);
+            previewContainer.style.setProperty("--textColor", textColor);
+            previewContainer.style.setProperty("--linkColor", linkColor);
         }
-    }, [fontScale, lineHeightScale, paddingScale]);
+    }, [fontScale, lineHeightScale, paddingScale, headerColor, textColor, linkColor]);
 
     const handleThemeChange = (selectedTheme: string) => {
         setTheme(selectedTheme);
@@ -85,6 +91,12 @@ function EditorPageContent() {
                 lineHeightScale={lineHeightScale}
                 paddingScale={paddingScale}
                 selectedTheme={theme}
+                headerColor={headerColor}
+                setHeaderColor={setHeaderColor}
+                textColor={textColor}
+                setTextColor={setTextColor}
+                linkColor={linkColor}
+                setLinkColor={setLinkColor}
             />
         </div>
     );

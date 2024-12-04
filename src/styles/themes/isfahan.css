@@ -6,7 +6,7 @@
     font-family: "Karla", "Inter", "Noto Sans SC";
     font-size: calc(18px * var(--fontScale));
     line-height: var(--lineHeightScale);
-    color: #222;
+    color: var(--textColor, #222);
 }
 
 .theme.isfahan h1 {
@@ -14,16 +14,18 @@
     font-size: calc(2.25rem * var(--fontScale));
     margin-top: 0;
     text-align: left;
+    color: var(--headerColor);
 }
 
 .theme.isfahan h2 {
-    color: #016ef1;
+    color: var(--headerColor, #016ef1);
     font-size: calc(1.5rem * var(--fontScale));
     margin-top: 0.5em;
     font-weight: bold;
 }
 
 .theme.isfahan h3 {
+    color: var(--headerColor);
     font-size: calc(1.25rem * var(--fontScale));
     margin-top: .5em;
     font-weight: bold;
@@ -31,15 +33,18 @@
 
 .theme.isfahan p {
     margin-top: .5rem;
+    color: var(--textColor);
 }
 
 .theme.isfahan a {
+    color: var(--linkColor);
     border-bottom: 1px dotted;
     text-decoration: none;
 }
 
 .theme.isfahan strong {
     font-weight: bold;
+    color: var(--textColor);
 }
 
 .theme.isfahan em {
@@ -54,11 +59,12 @@
 
 .theme.isfahan ul li {
     position: relative;
+    color: var(--textColor);
 }
 
 .theme.isfahan ul li:before {
+    color: var(--linkColor, #016ef1);
     content: "◦";
-    color: #016ef1;
     font-family: "Inter";
     left: -1em;
     position: absolute;
