@@ -27,8 +27,8 @@ function EditorPageContent() {
     const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
     const [paddingScale, setPaddingScale] = useState<number>(24);
     const [font, setFont] = useState<string>("'Inter', 'Noto Sans SC', sans-serif");
-    const [headerColor, setHeaderColor] = useState<string>("#000000");
-    const [textColor, setTextColor] = useState<string>("#000000");
+    const [headerColor, setHeaderColor] = useState<string>("#000");
+    const [textColor, setTextColor] = useState<string>("#000");
     const [linkColor, setLinkColor] = useState<string>("#1a73e8");
 
     const previewContainerRef = useRef<HTMLDivElement | null>(null);
