@@ -1,6 +1,6 @@
 # Michael Johnson
 **Project Manager**  
-London, UK | michael.johnson@example.com | +44 1234 567890 | [LinkedIn](https://linkedin.com/in/michaeljohnson)
+London, UK | michael.johnson@example.com | +44 1234 567890 | (https://linkedin.com/in/michaeljohnson)[LinkedIn]
 
 ---
 

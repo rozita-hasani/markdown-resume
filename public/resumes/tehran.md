@@ -1,6 +1,6 @@
 # John Smith
 **Marketing Manager**  
-New York, NY | johnsmith@example.com | +1 (123) 456-7890 | [LinkedIn](https://linkedin.com/in/johnsmith)
+New York, NY | johnsmith@example.com | +1 (123) 456-7890 | (https://linkedin.com/in/johnsmith)[LinkedIn]
 
 ---
 

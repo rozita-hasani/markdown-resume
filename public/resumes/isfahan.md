@@ -1,6 +1,6 @@
 # Sarah Lee
 **Data Scientist**  
-San Francisco, CA | sarahlee@example.com | +1 (415) 123-4567 | [LinkedIn](https://linkedin.com/in/sarahlee) | [GitHub](https://github.com/sarahlee)
+San Francisco, CA | sarahlee@example.com | +1 (415) 123-4567 | (https://linkedin.com/in/sarahlee)[LinkedIn] | (https://github.com/sarahlee)[GitHub]
 
 ---
 

@@ -18,7 +18,6 @@
 
 .theme.isfahan h2 {
     color: #016ef1;
-    text-transform: uppercase;
     font-size: calc(1.5rem * var(--fontScale));
     margin-top: 0.5em;
     font-weight: bold;

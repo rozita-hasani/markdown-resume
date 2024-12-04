@@ -17,9 +17,7 @@
 }
 
 .theme.tehran h2 {
-    border-bottom: 1px solid #ddd;
     position: relative;
-    text-transform: uppercase;
     color: #222;
     font-weight: 600;
     font-size: calc(1.5rem * var(--fontScale));

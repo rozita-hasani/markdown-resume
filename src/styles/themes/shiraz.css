@@ -25,7 +25,6 @@
     font-weight: 700;
     font-size: calc(1.5rem * var(--fontScale));
     margin-top: 0.5em;
-    text-transform: uppercase;
     position: relative;
     display: inline-block;
 }
@@ -47,8 +46,8 @@
 }
 
 .theme.shiraz hr {
-    border-top: 1px dashed #016ef1;
     margin: 1em 0;
+    border: none;
 }
 
 .theme.shiraz strong {
