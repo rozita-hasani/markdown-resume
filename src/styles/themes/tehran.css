@@ -11,7 +11,7 @@
 
 .theme.tehran h1 {
     font-weight: 800;
-    font-size: calc(2.25rem * var(--fontScale));
+    font-size: calc(2.25rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0;
     text-align: left;
     color: var(--headerColor, #222);
@@ -21,7 +21,7 @@
     position: relative;
     color: var(--headerColor, #222);
     font-weight: 600;
-    font-size: calc(1.5rem * var(--fontScale));
+    font-size: calc(1.5rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0.5em;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .theme.tehran h3 {
-    font-size: calc(1.25rem * var(--fontScale));
+    font-size: calc(1.25rem * var(--fontScale) * var(--headingScale, 1));
     color: var(--headerColor, #222);
     margin-top: 0.5em;
     font-weight: 600;

@@ -9,6 +9,8 @@ interface FontSectionProps {
     onFontChangeAction: (font: string) => void;
     onFontSizeChangeAction: (size: number) => void;
     fontScale: number;
+    headingScale: number;
+    onHeadingChangeAction: (heading: number) => void;
 }
 
 const loadFont = (fontUrl: string) => {
@@ -26,7 +28,7 @@ const loadFont = (fontUrl: string) => {
     }
 };
 
-export function FontSection({ onFontChangeAction, onFontSizeChangeAction, fontScale }: FontSectionProps) {
+export function FontSection({ onFontChangeAction, onFontSizeChangeAction, fontScale, headingScale, onHeadingChangeAction }: FontSectionProps) {
     const [font, setFont] = useState<string>("'Open Sans', sans-serif");
     const baseFontSize = 16;
 
@@ -69,6 +71,16 @@ export function FontSection({ onFontChangeAction, onFontSizeChangeAction, fontSc
                 step={0.1}
                 onChange={(e) => onFontSizeChangeAction(parseFloat(e.target.value))}
                 currentValue={`${(fontScale * baseFontSize).toFixed(1)}px`}
+            />
+
+            <Slider
+                label="Heading Scale"
+                value={headingScale}
+                min={0.5}
+                max={3.0}
+                step={0.1}
+                onChange={(e) => onHeadingChangeAction(parseFloat(e.target.value))}
+                currentValue={headingScale.toFixed(1)}
             />
         </SidebarSection>
     )

@@ -17,6 +17,7 @@ body {
 /* Global Variables */
 :root {
     --fontScale: 1;
+    --headingScale: 1;
     --lineHeightScale: 1.5;
     --paddingScale: 20px;
     --headerColor: #000;

@@ -11,7 +11,7 @@
 
 .theme.isfahan h1 {
     font-weight: normal;
-    font-size: calc(2.25rem * var(--fontScale));
+    font-size: calc(2.25rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0;
     text-align: left;
     color: var(--headerColor);
@@ -19,14 +19,14 @@
 
 .theme.isfahan h2 {
     color: var(--headerColor, #016ef1);
-    font-size: calc(1.5rem * var(--fontScale));
+    font-size: calc(1.5rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0.5em;
     font-weight: bold;
 }
 
 .theme.isfahan h3 {
     color: var(--headerColor);
-    font-size: calc(1.25rem * var(--fontScale));
+    font-size: calc(1.25rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: .5em;
     font-weight: bold;
 }

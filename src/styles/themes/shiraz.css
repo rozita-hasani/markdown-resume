@@ -20,7 +20,7 @@
 
 .theme.shiraz h1 {
     font-weight: normal;
-    font-size: calc(2.25rem * var(--fontScale));
+    font-size: calc(2.25rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0;
     text-align: left;
     color: var(--headerColor, #222);
@@ -29,7 +29,7 @@
 .theme.shiraz h2 {
     border-bottom: 1px dashed var(--linkColor, #016ef1);
     font-weight: 700;
-    font-size: calc(1.5rem * var(--fontScale));
+    font-size: calc(1.5rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0.5em;
     position: relative;
     display: inline-block;
@@ -37,7 +37,7 @@
 }
 
 .theme.shiraz h3 {
-    font-size: calc(1.25rem * var(--fontScale));
+    font-size: calc(1.25rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0.5rem;
     font-weight: 600;
     color: var(--headerColor, #222);

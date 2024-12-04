@@ -23,6 +23,7 @@ function EditorPageContent() {
     const [markdown, setMarkdown] = useState<string>();
     const [theme, setTheme] = useState<string>(template ?? "Tehran");
     const [fontScale, setFontScale] = useState<number>(1);
+    const [headingScale, setHeadingScale] = useState<number>(1);
     const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
     const [paddingScale, setPaddingScale] = useState<number>(24);
     const [font, setFont] = useState<string>("'Inter', 'Noto Sans SC', sans-serif");
@@ -55,13 +56,14 @@ function EditorPageContent() {
         const previewContainer = previewContainerRef.current;
         if (previewContainer) {
             previewContainer.style.setProperty('--fontScale', fontScale.toString());
+            previewContainer.style.setProperty("--headingScale", headingScale.toString());
             previewContainer.style.setProperty('--lineHeightScale', lineHeightScale.toString());
             previewContainer.style.setProperty('--paddingScale', `${paddingScale}px`);
             previewContainer.style.setProperty("--headerColor", headerColor);
             previewContainer.style.setProperty("--textColor", textColor);
             previewContainer.style.setProperty("--linkColor", linkColor);
         }
-    }, [fontScale, lineHeightScale, paddingScale, headerColor, textColor, linkColor]);
+    }, [fontScale, headingScale, lineHeightScale, paddingScale, headerColor, textColor, linkColor]);
 
     const handleThemeChange = (selectedTheme: string) => {
         setTheme(selectedTheme);
@@ -89,6 +91,8 @@ function EditorPageContent() {
                 onPaddingChange={setPaddingScale}
                 fontScale={fontScale}
                 lineHeightScale={lineHeightScale}
+                headingScale={headingScale}
+                onHeadingChange={setHeadingScale}
                 paddingScale={paddingScale}
                 selectedTheme={theme}
                 headerColor={headerColor}

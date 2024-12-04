@@ -15,7 +15,7 @@
 
 .theme.mashhad h1 {
     font-weight: 800;
-    font-size: calc(2.5rem * var(--fontScale));
+    font-size: calc(2.5rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0;
     text-align: left;
     color: var(--headerColor, #222);
@@ -26,7 +26,7 @@
     position: relative;
     color: var(--headerColor, #222);
     font-weight: 600;
-    font-size: calc(1.5rem * var(--fontScale));
+    font-size: calc(1.5rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0.5em;
 }
 
@@ -44,7 +44,7 @@
     color: var(--headerColor, #016ef1);
     margin-top: 0.5rem;
     font-weight: 600;
-    font-size: calc(1.25rem * var(--fontScale));
+    font-size: calc(1.25rem * var(--fontScale) * var(--headingScale, 1));
 }
 
 .theme.mashhad h3 + p {
