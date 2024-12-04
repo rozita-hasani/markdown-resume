@@ -16,14 +16,14 @@ export default function Home() {
 
         {/* Hero Section */}
             <section className="container mx-auto px-8 py-16">
-                <div className="flex flex-col md:flex-row items-center justify-between">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                     <div className="w-full md:w-1/2 mb-8 md:mb-0">
                         <h1 className="text-4xl font-medium text-gray-900 tracking-tight mb-4">Resume Markdown</h1>
                         <p className="text-lg text-gray-600 mb-6">Create a professional resume by writing in Markdown, using our simple editor, and choose from various templates to export your resume easily.</p>
                         <a href="/editor" className="bg-[#1a73e8] text-white text-sm py-3 px-6 rounded-lg shadow-md hover:bg-[#075cca] transition">Create Your Resume</a>
                     </div>
                     <div className="w-full md:w-1/2 flex justify-end">
-                        <Image src="/screenshots/landing-image.png" alt="Project Image" width={400} height={300}/>
+                        <Image src="/screenshots/landing-image.png" alt="Project Image" width={600} height={300}/>
                     </div>
                 </div>
             </section>
@@ -83,7 +83,7 @@ interface FeatureProps {
 
 function Feature({title, description, icon}: FeatureProps) {
     return (
-        <div className="flex flex-col p-6 border rounded-lg justify-center">
+        <div className="flex flex-col p-6 border rounded-lg justify-center h-full">
             <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#1a73e8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`lucide lucide-${icon}`}>
                     {svgPaths[icon]}
@@ -100,8 +100,8 @@ function TemplateCard({template}: { template: string }) {
     return (
         <a href={`/editor?template=${template}`}>
             <div className="p-2 flex flex-col justify-center md:mx-0 rounded-lg hover:shadow-xl transition cursor-pointer">
-                <Image src={`/screenshots/${template}-resume.jpg`} alt={`${template} Template`} width={300} height={200} className="mb-1 rounded-lg border"/>
-                <span className="block text-[#1a73e8] hover:underline font-semibold">{ThemeList[template as keyof typeof ThemeList]}</span>
+                <Image src={`/screenshots/${template}-resume.png`} alt={`${template} Template`} width={300} height={200} className="mb-1 rounded-lg border"/>
+                <span className="block text-[#1a73e8] font-semibold">{ThemeList[template as keyof typeof ThemeList]}</span>
             </div>
         </a>
     );
