@@ -18,18 +18,18 @@ export default function EditorPage() {
 
 function EditorPageContent() {
     const searchParams = useSearchParams();
-    const template = searchParams.get("template");
+    const template = searchParams.get("template") ?? 'tehran';
 
     const [markdown, setMarkdown] = useState<string>();
-    const [theme, setTheme] = useState<string>(template ?? "Tehran");
-    const [fontScale, setFontScale] = useState<number>(1);
-    const [headingScale, setHeadingScale] = useState<number>(1);
-    const [lineHeightScale, setLineHeightScale] = useState<number>(1.5);
-    const [paddingScale, setPaddingScale] = useState<number>(24);
-    const [font, setFont] = useState<string>("'Inter', 'Noto Sans SC', sans-serif");
-    const [headerColor, setHeaderColor] = useState<string>("#000");
-    const [textColor, setTextColor] = useState<string>("#000");
-    const [linkColor, setLinkColor] = useState<string>("#1a73e8");
+    const [theme, setTheme] = useState<string>(template);
+    const [font, setFont] = useState<string>(themes[theme].fontName);
+    const [fontScale, setFontScale] = useState<number>(themes[theme].fontScale);
+    const [headingScale, setHeadingScale] = useState<number>(themes[theme].headingScale);
+    const [lineHeightScale, setLineHeightScale] = useState<number>(themes[theme].lineHeightScale);
+    const [paddingScale, setPaddingScale] = useState<number>(themes[theme].paddingScale);
+    const [headerColor, setHeaderColor] = useState<string>(themes[theme].headerColor);
+    const [textColor, setTextColor] = useState<string>(themes[theme].textColor);
+    const [linkColor, setLinkColor] = useState<string>(themes[theme].linkColor);
 
     const previewContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -42,7 +42,7 @@ function EditorPageContent() {
                         setMarkdown("Unable to load the template from the given URL.");
                     } else {
                         res.text().then(setMarkdown);
-                        setTheme(template)
+                        applyThemeSettings(template)
                     }
                 })
                 .catch(() => {
@@ -50,6 +50,20 @@ function EditorPageContent() {
                 });
         }
     }, [template]);
+
+    // Utility function to apply theme settings
+    const applyThemeSettings = (themeName: string) => {
+        const selectedTheme = themes[themeName.toLowerCase()];
+
+        setFont(selectedTheme.fontName);
+        setFontScale(selectedTheme.fontScale);
+        setHeadingScale(selectedTheme.headingScale);
+        setLineHeightScale(selectedTheme.lineHeightScale);
+        setPaddingScale(selectedTheme.paddingScale);
+        setHeaderColor(selectedTheme.headerColor);
+        setTextColor(selectedTheme.textColor);
+        setLinkColor(selectedTheme.linkColor);
+    };
 
     // Update CSS variables in the previewContainer
     useEffect(() => {
@@ -66,8 +80,8 @@ function EditorPageContent() {
     }, [fontScale, headingScale, lineHeightScale, paddingScale, headerColor, textColor, linkColor]);
 
     const handleThemeChange = (selectedTheme: string) => {
-        setTheme(selectedTheme);
-        setFont(themes[selectedTheme].fontName);
+        setTheme(selectedTheme.toLowerCase());
+        applyThemeSettings(selectedTheme);
     };
 
     const handlePrint = () => {

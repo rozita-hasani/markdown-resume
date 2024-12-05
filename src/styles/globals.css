@@ -14,17 +14,6 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
-/* Global Variables */
-:root {
-    --fontScale: 1;
-    --headingScale: 1;
-    --lineHeightScale: 1.5;
-    --paddingScale: 20px;
-    --headerColor: #000;
-    --textColor: #000;
-    --linkColor: #1a73e8;
-}
-
 .previewContainer {
     padding: var(--paddingScale);
 }

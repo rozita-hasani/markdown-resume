@@ -24,20 +24,55 @@ export const svgPaths: Record<string, React.ReactNode[]> = {
 
 interface ThemeProps {
     fontName: string;
+    fontScale: number;
+    headingScale: number;
+    lineHeightScale: number;
+    paddingScale: number;
+    headerColor: string;
+    textColor: string;
+    linkColor: string;
 }
 
 export const themes: { [key: string]: ThemeProps } = {
-    Tehran: {
-        fontName: "'Inter', 'Noto Sans SC', sans-serif"
+    tehran: {
+        fontName: "'Inter', 'Noto Sans SC', sans-serif",
+        fontScale: 1,
+        headingScale: 1,
+        lineHeightScale: 1.5,
+        paddingScale: 24,
+        headerColor: "#222",
+        textColor: '#444',
+        linkColor: "#1A73E8FF"
     },
-    Isfahan: {
-        fontName: "'Poppins', 'Inter', 'Noto Sans SC', sans-serif"
+    isfahan: {
+        fontName: "'Poppins', 'Inter', 'Noto Sans SC', sans-serif",
+        fontScale: 1,
+        headingScale: 1,
+        lineHeightScale: 1.5,
+        paddingScale: 24,
+        headerColor: "#016ef1",
+        textColor: '#222',
+        linkColor: "#1a73e8"
     },
-    Shiraz: {
-        fontName: "'Nunito', 'Inter', 'Noto Sans SC', sans-serif"
+    shiraz: {
+        fontName: "'Nunito', 'Inter', 'Noto Sans SC', sans-serif",
+        fontScale: 1,
+        headingScale: 1,
+        lineHeightScale: 1.5,
+        paddingScale: 24,
+        headerColor: "#222",
+        textColor: '#444',
+        linkColor: "#1A73E8FF"
     },
-    Mashhad: {
-        fontName: "'Work Sans', 'Inter', 'Noto Sans SC', sans-serif"
+    mashhad: {
+        fontName: "'Work Sans', 'Inter', 'Noto Sans SC', sans-serif",
+        fontScale: 1,
+        headingScale: 1,
+        lineHeightScale: 1.5,
+        paddingScale: 24,
+        headerColor: "#222",
+        textColor: '#222',
+        linkColor: "#1A73E8FF"
     }
 };
 

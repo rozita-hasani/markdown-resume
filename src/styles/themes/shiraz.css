@@ -57,7 +57,6 @@
 .theme.shiraz hr {
     margin: 1em 0;
     border: none;
-    border-top: 1px solid var(--linkColor, #ddd);
 }
 
 .theme.shiraz strong {

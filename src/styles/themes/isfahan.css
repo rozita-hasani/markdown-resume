@@ -14,7 +14,6 @@
     font-size: calc(2.25rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0;
     text-align: left;
-    color: var(--headerColor);
 }
 
 .theme.isfahan h2 {

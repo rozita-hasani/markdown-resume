@@ -16,7 +16,7 @@ export default function ColorSection({headerColor, setHeaderColor, textColor, se
     return (
         <SidebarSection title="Colors">
             <ColorPicker
-                label="Header"
+                label="Heading"
                 value={headerColor}
                 onChange={setHeaderColor}
             />
