@@ -15,7 +15,7 @@ export default function Preview({content, theme, font, previewContainerRef}: Pre
     return (
         <div
             ref={previewContainerRef}
-            className={`previewContainer my-4 mr-2 w-1/2 relative overflow-auto custom-scrollbar h-full theme bg-white border border-gray-200 prose max-w-none text-[#1c2024] p-3 ${theme.toLowerCase()}`}
+            className={`previewContainer my-4 mr-2 w-1/2 relative overflow-auto custom-scrollbar h-full theme bg-white border border-gray-200 prose max-w-none text-[#1c2024] p-3 ${theme?.toLowerCase()}`}
             style={{fontFamily: font, height: 'calc(100vh - 32px)', }}
         >
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>

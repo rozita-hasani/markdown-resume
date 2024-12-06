@@ -25,10 +25,10 @@ export const fonts: { [key: string]: string } = {
     "Open Sans": 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap',
     "Noto Sans": 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap',
     "Ubuntu": 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap',
-    "'Inter', 'Noto Sans SC', sans-serif": 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap',
-    "'Poppins', 'Inter', 'Noto Sans SC', sans-serif": 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap',
-    "'Nunito', 'Inter', 'Noto Sans SC', sans-serif": 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap',
-    "'Work Sans', 'Inter', 'Noto Sans SC', sans-serif": 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap',
+    'Inter': 'https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap',
+    'Poppins': 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap',
+    'Nunito': 'https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap',
+    'Work Sans': 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap',
     "Merriweather": 'https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap',
     "PT Sans": 'https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap',
     "Karla": 'https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap',
@@ -54,7 +54,7 @@ interface ThemeProps {
 
 export const themes: { [key: string]: ThemeProps } = {
     tehran: {
-        fontName: "'Inter', 'Noto Sans SC', sans-serif",
+        fontName: 'Inter',
         fontScale: 1,
         headingScale: 1,
         lineHeightScale: 1.5,
@@ -65,7 +65,7 @@ export const themes: { [key: string]: ThemeProps } = {
         linkColor: "#1a73e8"
     },
     isfahan: {
-        fontName: "'Poppins', 'Inter', 'Noto Sans SC', sans-serif",
+        fontName: 'Poppins',
         fontScale: 1,
         headingScale: 1,
         lineHeightScale: 1.5,
@@ -76,7 +76,7 @@ export const themes: { [key: string]: ThemeProps } = {
         linkColor: "#1a73e8"
     },
     shiraz: {
-        fontName: "'Nunito', 'Inter', 'Noto Sans SC', sans-serif",
+        fontName: 'Nunito',
         fontScale: 1,
         headingScale: 1,
         lineHeightScale: 1.5,
@@ -87,7 +87,7 @@ export const themes: { [key: string]: ThemeProps } = {
         linkColor: "#1a73e8"
     },
     mashhad: {
-        fontName: "'Work Sans', 'Inter', 'Noto Sans SC', sans-serif",
+        fontName: 'Work Sans',
         fontScale: 1,
         headingScale: 1,
         lineHeightScale: 1.5,

@@ -8,15 +8,16 @@ interface ThemeSectionProps {
     selectedTheme: string
 }
 
-
 function capitalizeFirstLetter(str: string) {
-    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+    return str?.charAt(0).toUpperCase() + str?.slice(1).toLowerCase();
 }
 
 export function ThemeSection({onThemeChange, selectedTheme}: ThemeSectionProps) {
-    const [theme, setTheme] = useState<string>(capitalizeFirstLetter(selectedTheme));
+    const fallbackSelectedTheme = selectedTheme ? capitalizeFirstLetter(selectedTheme) : 'tehran';
+    const [theme, setTheme] = useState<string>(fallbackSelectedTheme);
 
     useEffect(() => {
+        if (!selectedTheme) return;
         setTheme(capitalizeFirstLetter(selectedTheme));
     }, [selectedTheme]);
 

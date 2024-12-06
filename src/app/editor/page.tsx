@@ -19,19 +19,19 @@ export default function EditorPage() {
 
 function EditorPageContent() {
     const searchParams = useSearchParams();
-    const template = searchParams.get("template") ?? 'tehran';
+    const template = searchParams.get("template");
 
     const [markdown, setMarkdown] = useState<string>();
     const [theme, setTheme] = useState<string>(template);
-    const [font, setFont] = useState<string>(themes[theme].fontName);
-    const [fontScale, setFontScale] = useState<number>(themes[theme].fontScale);
-    const [headingScale, setHeadingScale] = useState<number>(themes[theme].headingScale);
-    const [lineHeightScale, setLineHeightScale] = useState<number>(themes[theme].lineHeightScale);
-    const [xPaddingScale, setXPaddingScale] = useState<number>(themes[theme].xPaddingScale);
-    const [yPaddingScale, setYPaddingScale] = useState<number>(themes[theme].yPaddingScale);
-    const [headerColor, setHeaderColor] = useState<string>(themes[theme].headerColor);
-    const [textColor, setTextColor] = useState<string>(themes[theme].textColor);
-    const [linkColor, setLinkColor] = useState<string>(themes[theme].linkColor);
+    const [font, setFont] = useState<string>(themes[theme]?.fontName ?? 'Open Sans');
+    const [fontScale, setFontScale] = useState<number>(themes[theme]?.fontScale ?? 1);
+    const [headingScale, setHeadingScale] = useState<number>(themes[theme]?.headingScale ?? 1);
+    const [lineHeightScale, setLineHeightScale] = useState<number>(themes[theme]?.lineHeightScale ?? 1.5);
+    const [xPaddingScale, setXPaddingScale] = useState<number>(themes[theme]?.xPaddingScale ?? 20);
+    const [yPaddingScale, setYPaddingScale] = useState<number>(themes[theme]?.yPaddingScale ?? 20);
+    const [headerColor, setHeaderColor] = useState<string>(themes[theme]?.headerColor ?? '#000');
+    const [textColor, setTextColor] = useState<string>(themes[theme]?.textColor ?? '#000');
+    const [linkColor, setLinkColor] = useState<string>(themes[theme]?.linkColor ?? '#1a73e8');
 
     const previewContainerRef = useRef<HTMLDivElement | null>(null);
 
