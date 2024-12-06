@@ -1,14 +1,14 @@
 # Resume Markdown
 
 ## Introduction
-Resume Markdown is an open-source project that helps users create professional resumes. You write your resume in **markdown format**, and the editor lets you preview, apply different **themes**, customize, and save it as a **PDF**.
+Resume Markdown is an open-source project that helps users create professional resumes. You write your resume in **markdown format**, and the editor lets you preview, apply different **themes**, customize, and export it as a **PDF**.
 
 ## Features
 - **Write in Markdown**: Use simple markdown to write your resume content.
 - **Live Preview**: See your resume as you type, so you know how it looks.
 - **Different Themes**: Choose from multiple styles to make your resume unique.
 - **Custom Fonts and Layout**: Adjust fonts, sizes, line heights, and more to fit your personal style.
-- **Download as PDF**: Save your resume as a PDF document that’s ready to share.
+- **Download as PDF**: Export your resume as a PDF document that’s ready to share.
 
 ## Technologies Used
 - [React](https://react.dev/)

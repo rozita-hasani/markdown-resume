@@ -10,12 +10,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --fontName: "Open Sans";
+    --fontScale: 1;
+    --headingScale: 1;
+    --lineHeightScale: 1.5;
+    --xPaddingScale: 20px;
+    --yPaddingScale: 20px;
+    --headerColor: #000;
+    --textColor: #000;
+    --linkColor: #1a73e8;
+}
+
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--fontName, "Open Sans"), sans-serif;
 }
 
 .previewContainer {
-    padding: var(--paddingScale);
+    padding: var(--yPaddingScale) var(--xPaddingScale);
 }
 
 /* Custom Scrollbar for WebKit Browsers */

@@ -42,8 +42,8 @@ export default function Home() {
                         icon="palette"
                     />
                     <Feature
-                        title="Save as PDF"
-                        description="Save and print your resume as a high-quality PDF effortlessly."
+                        title="Export as PDF"
+                        description="Export and print your resume as a high-quality PDF effortlessly."
                         icon="file-down"
                     />
                 </div>
@@ -57,7 +57,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col md:flex-row justify-between">
                     {Object.keys(ThemeList).map((template) => (
-                        <TemplateCard template={template} />
+                        <TemplateCard key={template} template={template} />
                     ))}
                 </div>
             </section>
@@ -96,9 +96,9 @@ function Feature({title, description, icon}: FeatureProps) {
 }
 
 // Template Card Component for Templates Section
-function TemplateCard({template}: { template: string }) {
+function TemplateCard({template, key}: { template: string, key?: string }) {
     return (
-        <a key={template} href={`/editor?template=${template}`}>
+        <a key={key} href={`/editor?template=${template}`}>
             <div className="p-2 flex flex-col justify-center md:mx-0 rounded-lg hover:shadow-xl transition cursor-pointer w-fit right-0 left-0 mx-auto">
                 <Image src={`/screenshots/${template}-resume.png`} alt={`${template} Template`} width={300} height={200} className="mb-1 rounded-lg border"/>
                 <span className="block text-[#1a73e8] font-semibold">{ThemeList[template as keyof typeof ThemeList]}</span>

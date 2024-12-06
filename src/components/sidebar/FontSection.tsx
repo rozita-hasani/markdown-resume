@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState, useCallback } from "react";
+import React, {useCallback } from "react";
 import { SidebarSection } from "@/components/sidebar/SidebarSection";
 import { ChevronDown } from "lucide-react";
 import { Slider } from "@/components/sidebar/Slider";
+import {fonts} from "@/lib/constants";
 
 interface FontSectionProps {
     onFontChangeAction: (font: string) => void;
@@ -11,6 +12,8 @@ interface FontSectionProps {
     fontScale: number;
     headingScale: number;
     onHeadingChangeAction: (heading: number) => void;
+    font: string;
+    setFont: (font: string) => void;
 }
 
 const loadFont = (fontUrl: string) => {
@@ -28,22 +31,15 @@ const loadFont = (fontUrl: string) => {
     }
 };
 
-export function FontSection({ onFontChangeAction, onFontSizeChangeAction, fontScale, headingScale, onHeadingChangeAction }: FontSectionProps) {
-    const [font, setFont] = useState<string>("'Open Sans', sans-serif");
+export function FontSection({ onFontChangeAction, onFontSizeChangeAction, font, setFont, fontScale, headingScale, onHeadingChangeAction }: FontSectionProps) {
     const baseFontSize = 16;
-
-    const fonts: { [key: string]: string } = {
-        "Open Sans": 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap',
-        "Noto Sans": 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap',
-        "Ubuntu": 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap',
-    };
 
     const handleFontChange = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedFont = e.target.value;
         setFont(selectedFont);
         onFontChangeAction(selectedFont);
         loadFont(fonts[selectedFont]);
-    }, [onFontChangeAction, fonts]);
+    }, [onFontChangeAction, setFont]);
 
     return (
         <SidebarSection title="Font">

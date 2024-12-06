@@ -26,12 +26,15 @@ function EditorPageContent() {
     const [fontScale, setFontScale] = useState<number>(themes[theme].fontScale);
     const [headingScale, setHeadingScale] = useState<number>(themes[theme].headingScale);
     const [lineHeightScale, setLineHeightScale] = useState<number>(themes[theme].lineHeightScale);
-    const [paddingScale, setPaddingScale] = useState<number>(themes[theme].paddingScale);
+    const [xPaddingScale, setXPaddingScale] = useState<number>(themes[theme].xPaddingScale);
+    const [yPaddingScale, setYPaddingScale] = useState<number>(themes[theme].yPaddingScale);
     const [headerColor, setHeaderColor] = useState<string>(themes[theme].headerColor);
     const [textColor, setTextColor] = useState<string>(themes[theme].textColor);
     const [linkColor, setLinkColor] = useState<string>(themes[theme].linkColor);
 
     const previewContainerRef = useRef<HTMLDivElement | null>(null);
+
+    console.log(font)
 
     // Fetch the template and set the markdown state
     useEffect(() => {
@@ -59,7 +62,8 @@ function EditorPageContent() {
         setFontScale(selectedTheme.fontScale);
         setHeadingScale(selectedTheme.headingScale);
         setLineHeightScale(selectedTheme.lineHeightScale);
-        setPaddingScale(selectedTheme.paddingScale);
+        setXPaddingScale(selectedTheme.xPaddingScale);
+        setYPaddingScale(selectedTheme.yPaddingScale);
         setHeaderColor(selectedTheme.headerColor);
         setTextColor(selectedTheme.textColor);
         setLinkColor(selectedTheme.linkColor);
@@ -69,15 +73,17 @@ function EditorPageContent() {
     useEffect(() => {
         const previewContainer = previewContainerRef.current;
         if (previewContainer) {
+            previewContainer.style.setProperty('--fontName', font);
             previewContainer.style.setProperty('--fontScale', fontScale.toString());
             previewContainer.style.setProperty("--headingScale", headingScale.toString());
             previewContainer.style.setProperty('--lineHeightScale', lineHeightScale.toString());
-            previewContainer.style.setProperty('--paddingScale', `${paddingScale}px`);
+            previewContainer.style.setProperty('--xPaddingScale', `${xPaddingScale}px`);
+            previewContainer.style.setProperty('--yPaddingScale', `${yPaddingScale}px`);
             previewContainer.style.setProperty("--headerColor", headerColor);
             previewContainer.style.setProperty("--textColor", textColor);
             previewContainer.style.setProperty("--linkColor", linkColor);
         }
-    }, [fontScale, headingScale, lineHeightScale, paddingScale, headerColor, textColor, linkColor]);
+    }, [font, fontScale, headingScale, lineHeightScale, xPaddingScale, yPaddingScale, headerColor, textColor, linkColor]);
 
     const handleThemeChange = (selectedTheme: string) => {
         setTheme(selectedTheme.toLowerCase());
@@ -97,17 +103,21 @@ function EditorPageContent() {
                 </div>
             </div>
             <Sidebar
+                font={font}
+                setFont={setFont}
                 handlePrint={handlePrint}
                 onThemeChange={handleThemeChange}
                 onFontChange={setFont}
                 onFontSizeChange={setFontScale}
                 onLineHeightChange={setLineHeightScale}
-                onPaddingChange={setPaddingScale}
+                onXPaddingChange={setXPaddingScale}
+                onYPaddingChange={setYPaddingScale}
                 fontScale={fontScale}
                 lineHeightScale={lineHeightScale}
                 headingScale={headingScale}
                 onHeadingChange={setHeadingScale}
-                paddingScale={paddingScale}
+                xPaddingScale={xPaddingScale}
+                yPaddingScale={yPaddingScale}
                 selectedTheme={theme}
                 headerColor={headerColor}
                 setHeaderColor={setHeaderColor}
