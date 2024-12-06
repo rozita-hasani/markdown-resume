@@ -5,6 +5,7 @@ import { SidebarSection } from "@/components/sidebar/SidebarSection";
 import { ChevronDown } from "lucide-react";
 import { Slider } from "@/components/sidebar/Slider";
 import {fonts} from "@/lib/constants";
+import {loadFont} from "@/lib/fontUtils";
 
 interface FontSectionProps {
     onFontChangeAction: (font: string) => void;
@@ -15,21 +16,6 @@ interface FontSectionProps {
     font: string;
     setFont: (font: string) => void;
 }
-
-const loadFont = (fontUrl: string) => {
-    const linkId = 'font-link';
-    let linkElement = document.getElementById(linkId) as HTMLLinkElement;
-
-    if (linkElement) {
-        linkElement.href = fontUrl;
-    } else {
-        linkElement = document.createElement('link');
-        linkElement.id = linkId;
-        linkElement.rel = 'stylesheet';
-        linkElement.href = fontUrl;
-        document.head.appendChild(linkElement);
-    }
-};
 
 export function FontSection({ onFontChangeAction, onFontSizeChangeAction, font, setFont, fontScale, headingScale, onHeadingChangeAction }: FontSectionProps) {
     const baseFontSize = 16;

@@ -27,6 +27,7 @@ body {
 }
 
 .previewContainer {
+    font-family: var(--fontName, "Open Sans"), sans-serif;
     padding: var(--yPaddingScale) var(--xPaddingScale);
 }
 

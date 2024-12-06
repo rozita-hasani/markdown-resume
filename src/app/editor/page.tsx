@@ -4,9 +4,10 @@ import {useState, useRef, useEffect, Suspense} from "react";
 import Editor from "@/components/editor/Editor";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Preview from "@/components/preview/Preview";
-import {themes} from "@/lib/constants";
+import {fonts, themes} from "@/lib/constants";
 import '../../styles/globals.css'
 import {useSearchParams} from "next/navigation";
+import {loadFont} from "@/lib/fontUtils";
 
 export default function EditorPage() {
     return (
@@ -34,8 +35,6 @@ function EditorPageContent() {
 
     const previewContainerRef = useRef<HTMLDivElement | null>(null);
 
-    console.log(font)
-
     // Fetch the template and set the markdown state
     useEffect(() => {
         if (template) {
@@ -53,6 +52,10 @@ function EditorPageContent() {
                 });
         }
     }, [template]);
+
+    useEffect(() => {
+        loadFont(fonts[font]);
+    }, [font]);
 
     // Utility function to apply theme settings
     const applyThemeSettings = (themeName: string) => {
