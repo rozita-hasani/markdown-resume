@@ -135,4 +135,4 @@ Mastering the art of resume formatting is about balancing professionalism with r
 
 ---
 
-**Keywords for SEO:** Resume formatting tips, clean resume layouts, professional resume design, resume best practices, ATS-friendly resumes.
+**Keywords:** Resume formatting tips, clean resume layouts, professional resume design, resume best practices, ATS-friendly resumes.

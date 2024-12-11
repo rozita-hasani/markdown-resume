@@ -126,4 +126,4 @@ Whether you’re a tech professional seeking efficiency or a creative aiming for
 
 ---
 
-**Keywords for SEO:** Markdown resumes, traditional resumes, ATS-friendly resumes, resume formats comparison, tech professional resumes.
+**Keywords:** Markdown resumes, traditional resumes, ATS-friendly resumes, resume formats comparison, tech professional resumes.
