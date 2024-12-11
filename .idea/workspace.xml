@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8c294fe6-2eb7-4fcc-b240-540e52742fda" name="Changes" comment="chore: update package with dependencies and scripts">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.b3V0.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.b3V0.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.cHVibGlj.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/resumake.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2pQYIAucuoFeYiPrCFdub8rrz1V" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;disable.download.node.interpreter.editor.notification&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rozita-hasani/Documents/Programming/resumake/public/blog/thumbnail&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.deploy.executor&quot;: &quot;Run&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/rozita-hasani/Documents/Programming/resumake/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/blog/thumbnail" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/content/blog" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public/blog" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/blog/thumbnail" />
+      <recent name="$PROJECT_DIR$/public/blogThumbnail" />
+      <recent name="$PROJECT_DIR$/src/content" />
+      <recent name="$PROJECT_DIR$/public/blog" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v22.11.0/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="dev" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v22.11.0/bin/node" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-WS-243.21565.180" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c294fe6-2eb7-4fcc-b240-540e52742fda" name="Changes" comment="" />
+      <created>1732699683674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732699683674</updated>
+      <workItem from="1732699684894" duration="8938000" />
+      <workItem from="1732735851344" duration="4685000" />
+      <workItem from="1732781356255" duration="11151000" />
+      <workItem from="1732801695726" duration="4906000" />
+      <workItem from="1732863248459" duration="4255000" />
+      <workItem from="1733042128250" duration="1334000" />
+      <workItem from="1733047163270" duration="91028000" />
+      <workItem from="1733741545137" duration="35306000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore: Set up Next.js project with initial configuration and required packages">
+      <option name="closed" value="true" />
+      <created>1733145689170</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733145689170</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: Implement RootLayout with metadata, global styles and logo">
+      <option name="closed" value="true" />
+      <created>1733145887494</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733145887494</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: Add initial content to Home page">
+      <option name="closed" value="true" />
+      <created>1733145920673</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733145920673</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: Create Sidebar component">
+      <option name="closed" value="true" />
+      <created>1733145993386</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733145993386</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: Create Sidebar Buttons component">
+      <option name="closed" value="true" />
+      <created>1733146485253</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146485253</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: Create Sidebar Section and Slider component">
+      <option name="closed" value="true" />
+      <created>1733146507923</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146507923</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: Create Sidebar Layout Section component">
+      <option name="closed" value="true" />
+      <created>1733146537531</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146537531</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: Create Sidebar Font Section component">
+      <option name="closed" value="true" />
+      <created>1733146558029</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146558029</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: Create Sidebar Theme Section component">
+      <option name="closed" value="true" />
+      <created>1733146573030</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146573030</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: Create Editor component">
+      <option name="closed" value="true" />
+      <created>1733146608935</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146608935</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: Create Preview component">
+      <option name="closed" value="true" />
+      <created>1733146623378</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146623378</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: Add EditorPageContent component for editor functionality with preview and sidebar controls">
+      <option name="closed" value="true" />
+      <created>1733146711722</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146711722</updated>
+    </task>
+    <task id="LOCAL-00013" summary="style: Add initial styles for components, and editor page">
+      <option name="closed" value="true" />
+      <created>1733146818782</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146818782</updated>
+    </task>
+    <task id="LOCAL-00014" summary="style: Add initial styles for print">
+      <option name="closed" value="true" />
+      <created>1733146831866</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146831866</updated>
+    </task>
+    <task id="LOCAL-00015" summary="docs: Add sample resume markdown files for templates">
+      <option name="closed" value="true" />
+      <created>1733146891018</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146891018</updated>
+    </task>
+    <task id="LOCAL-00016" summary="docs: Add project screenshots for documentation and previews">
+      <option name="closed" value="true" />
+      <created>1733146934121</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1733146934121</updated>
+    </task>
+    <task id="LOCAL-00017" summary="feat: Add constants.tsx for reusable static values">
+      <option name="closed" value="true" />
+      <created>1733147016475</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1733147016475</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore: Add Firebase configuration files for deployment">
+      <option name="closed" value="true" />
+      <created>1733147076419</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1733147076419</updated>
+    </task>
+    <task id="LOCAL-00019" summary="chore: Add Tailwind CSS configuration file and update project settings">
+      <option name="closed" value="true" />
+      <created>1733147142097</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733147142097</updated>
+    </task>
+    <task id="LOCAL-00020" summary="docs: Add README">
+      <option name="closed" value="true" />
+      <created>1733162684407</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1733162684407</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: Toggle between theme samples and resume templates">
+      <option name="closed" value="true" />
+      <created>1733164585468</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733164585468</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fix: fix screenshots address">
+      <option name="closed" value="true" />
+      <created>1733165275060</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1733165275060</updated>
+    </task>
+    <task id="LOCAL-00023" summary="feat: improve resume styles">
+      <option name="closed" value="true" />
+      <created>1733303378177</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733303378177</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: remove markdown initial value">
+      <option name="closed" value="true" />
+      <created>1733303446096</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733303446096</updated>
+    </task>
+    <task id="LOCAL-00025" summary="feat: change name of button from download to export">
+      <option name="closed" value="true" />
+      <created>1733303477392</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733303477392</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat: improve style of favicon">
+      <option name="closed" value="true" />
+      <created>1733303531130</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733303531130</updated>
+    </task>
+    <task id="LOCAL-00027" summary="feat: deploy app">
+      <option name="closed" value="true" />
+      <created>1733303574638</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733303574638</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix: change screenshots">
+      <option name="closed" value="true" />
+      <created>1733303621147</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1733303621147</updated>
+    </task>
+    <task id="LOCAL-00029" summary="feat: add color customization options to sidebar">
+      <option name="closed" value="true" />
+      <created>1733311597803</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1733311597803</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feat: add heading customization option to sidebar">
+      <option name="closed" value="true" />
+      <created>1733320989130</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1733320989130</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix: fix type of variables">
+      <option name="closed" value="true" />
+      <created>1733321093330</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1733321093330</updated>
+    </task>
+    <task id="LOCAL-00032" summary="feat: change color input style">
+      <option name="closed" value="true" />
+      <created>1733322378284</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1733322378284</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: set responsive design for landing page">
+      <option name="closed" value="true" />
+      <created>1733336434663</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1733336434663</updated>
+    </task>
+    <task id="LOCAL-00034" summary="refactor: initialize state values based on the selected theme">
+      <option name="closed" value="true" />
+      <created>1733383958628</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1733383958628</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: add dynamic font family changes and separate x and y padding adjustments">
+      <option name="closed" value="true" />
+      <created>1733499201685</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1733499201685</updated>
+    </task>
+    <task id="LOCAL-00036" summary="feat: move loadFont utility to shared file and ensure font is loaded before applying in preview">
+      <option name="closed" value="true" />
+      <created>1733500193233</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1733500193233</updated>
+    </task>
+    <task id="LOCAL-00037" summary="feat: reset editor and preview to empty state with default root styles when creating a new resume">
+      <option name="closed" value="true" />
+      <created>1733508110216</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733508110216</updated>
+    </task>
+    <task id="LOCAL-00038" summary="fix: move templates into public">
+      <option name="closed" value="true" />
+      <created>1733908439018</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1733908439018</updated>
+    </task>
+    <task id="LOCAL-00039" summary="feat: add header and footer components">
+      <option name="closed" value="true" />
+      <created>1733908534156</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733908534156</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix: add &quot;Action&quot; suffix to handler prop names">
+      <option name="closed" value="true" />
+      <created>1733908788203</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1733908788203</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix: replace svgPaths with JSX elements for feature icons">
+      <option name="closed" value="true" />
+      <created>1733908923260</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1733908923260</updated>
+    </task>
+    <task id="LOCAL-00042" summary="feat: add mobile screen warning component to editor page to prevent usage on small screens">
+      <option name="closed" value="true" />
+      <created>1733909037678</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1733909037678</updated>
+    </task>
+    <task id="LOCAL-00043" summary="refactor: move metadata and head tag from layout to page component">
+      <option name="closed" value="true" />
+      <created>1733909244792</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1733909244792</updated>
+    </task>
+    <task id="LOCAL-00044" summary="feat: add blog section and utility functions for managing and parsing blog posts">
+      <option name="closed" value="true" />
+      <created>1733909678908</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1733909678908</updated>
+    </task>
+    <task id="LOCAL-00045" summary="feat: add blog post layout and dynamic page rendering, add CustomMDX component with MDXRemote support, add blog CSS styles">
+      <option name="closed" value="true" />
+      <created>1733910135083</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1733910135083</updated>
+    </task>
+    <task id="LOCAL-00046" summary="feat: add blog markdown files and associated thumbnails">
+      <option name="closed" value="true" />
+      <created>1733910260707</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1733910260707</updated>
+    </task>
+    <task id="LOCAL-00047" summary="docs: update README content">
+      <option name="closed" value="true" />
+      <created>1733910409373</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1733910409373</updated>
+    </task>
+    <task id="LOCAL-00048" summary="chore: update next.config.ts for additional configuration">
+      <option name="closed" value="true" />
+      <created>1733910727564</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1733910727564</updated>
+    </task>
+    <task id="LOCAL-00049" summary="chore: update package with dependencies and scripts">
+      <option name="closed" value="true" />
+      <created>1733911001349</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1733911001349</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: change name of button from download to export" />
+    <MESSAGE value="feat: improve style of favicon" />
+    <MESSAGE value="feat: deploy app" />
+    <MESSAGE value="fix: change screenshots" />
+    <MESSAGE value="feat: add color customization options to sidebar" />
+    <MESSAGE value="feat: add heading customization option to sidebar" />
+    <MESSAGE value="fix: fix type of variables" />
+    <MESSAGE value="feat: change color input style" />
+    <MESSAGE value="feat: set responsive design for landing page" />
+    <MESSAGE value="refactor: initialize state values based on the selected theme" />
+    <MESSAGE value="feat: add dynamic font family changes and separate x and y padding adjustments" />
+    <MESSAGE value="feat: move loadFont utility to shared file and ensure font is loaded before applying in preview" />
+    <MESSAGE value="feat: reset editor and preview to empty state with default root styles when creating a new resume" />
+    <MESSAGE value="fix: move templates into public" />
+    <MESSAGE value="feat: add header and footer components" />
+    <MESSAGE value="fix: add &quot;Action&quot; suffix to handler prop names" />
+    <MESSAGE value="fix: replace svgPaths with JSX elements for feature icons" />
+    <MESSAGE value="feat: add mobile screen warning component to editor page to prevent usage on small screens" />
+    <MESSAGE value="refactor: move metadata and head tag from layout to page component" />
+    <MESSAGE value="feat: add blog section and utility functions for managing and parsing blog posts" />
+    <MESSAGE value="feat: add blog post layout and dynamic page rendering, add CustomMDX component with MDXRemote support, add blog CSS styles" />
+    <MESSAGE value="feat: add blog markdown files and associated thumbnails" />
+    <MESSAGE value="docs: update README content" />
+    <MESSAGE value="chore: update next.config.ts for additional configuration" />
+    <MESSAGE value="chore: update package with dependencies and scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: update package with dependencies and scripts" />
+  </component>
+</project>
