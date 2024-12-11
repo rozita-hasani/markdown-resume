@@ -5,30 +5,30 @@ import ColorPicker from "@/components/sidebar/ColorPicker";
 
 interface ColorSectionProps {
     headerColor: string;
-    setHeaderColor: (color: string) => void;
+    setHeaderColorAction: (color: string) => void;
     textColor: string;
-    setTextColor: (color: string) => void;
+    setTextColorAction: (color: string) => void;
     linkColor: string;
-    setLinkColor: (color: string) => void;
+    setLinkColorAction: (color: string) => void;
 }
 
-export default function ColorSection({headerColor, setHeaderColor, textColor, setTextColor, linkColor, setLinkColor}: ColorSectionProps) {
+export default function ColorSection({headerColor, setHeaderColorAction, textColor, setTextColorAction, linkColor, setLinkColorAction}: ColorSectionProps) {
     return (
         <SidebarSection title="Colors">
             <ColorPicker
                 label="Heading"
                 value={headerColor}
-                onChange={setHeaderColor}
+                onChange={setHeaderColorAction}
             />
             <ColorPicker
                 label="Text"
                 value={textColor}
-                onChange={setTextColor}
+                onChange={setTextColorAction}
             />
             <ColorPicker
                 label="Link"
                 value={linkColor}
-                onChange={setLinkColor}
+                onChange={setLinkColorAction}
             />
         </SidebarSection>
     );

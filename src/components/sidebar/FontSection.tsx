@@ -14,18 +14,18 @@ interface FontSectionProps {
     headingScale: number;
     onHeadingChangeAction: (heading: number) => void;
     font: string;
-    setFont: (font: string) => void;
+    setFontAction: (font: string) => void;
 }
 
-export function FontSection({ onFontChangeAction, onFontSizeChangeAction, font, setFont, fontScale, headingScale, onHeadingChangeAction }: FontSectionProps) {
+export function FontSection({ onFontChangeAction, onFontSizeChangeAction, font, setFontAction, fontScale, headingScale, onHeadingChangeAction }: FontSectionProps) {
     const baseFontSize = 16;
 
     const handleFontChange = useCallback((e: React.ChangeEvent<HTMLSelectElement>) => {
         const selectedFont = e.target.value;
-        setFont(selectedFont);
+        setFontAction(selectedFont);
         onFontChangeAction(selectedFont);
         loadFont(fonts[selectedFont]);
-    }, [onFontChangeAction, setFont]);
+    }, [onFontChangeAction, setFontAction]);
 
     return (
         <SidebarSection title="Font">
