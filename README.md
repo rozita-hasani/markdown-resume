@@ -1,7 +1,7 @@
-# Resume Markdown
+# Markdown Resume
 
 ## Introduction
-Resume Markdown is an open-source project that helps users create professional resumes. You write your resume in **markdown format**, and the editor lets you preview, apply different **themes**, customize, and export it as a **PDF**.
+Markdown Resume is an open-source project that helps users create professional resumes. You write your resume in **markdown format**, and the editor lets you preview, apply different **themes**, customize, and export it as a **PDF**.
 
 ## Features
 - **Write in Markdown**: Use simple markdown to write your resume content.
