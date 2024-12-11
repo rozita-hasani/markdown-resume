@@ -8,6 +8,7 @@ import {fonts, themes} from "@/lib/constants";
 import '../../styles/globals.css'
 import {useSearchParams} from "next/navigation";
 import {loadFont} from "@/lib/fontUtils";
+import MobileScreenWarning from "@/components/MobileScreenWarning";
 
 export default function EditorPage() {
     return (
@@ -22,7 +23,7 @@ function EditorPageContent() {
     const template = searchParams.get("template");
 
     const [markdown, setMarkdown] = useState<string>();
-    const [theme, setTheme] = useState<string>(template);
+    const [theme, setTheme] = useState<string>(template ?? "tehran");
     const [font, setFont] = useState<string>(themes[theme]?.fontName ?? 'Open Sans');
     const [fontScale, setFontScale] = useState<number>(themes[theme]?.fontScale ?? 1);
     const [headingScale, setHeadingScale] = useState<number>(themes[theme]?.headingScale ?? 1);
@@ -38,7 +39,7 @@ function EditorPageContent() {
     // Fetch the template and set the markdown state
     useEffect(() => {
         if (template) {
-            fetch(`/resumes/${template}.md`)
+            fetch(`/templates/${template}.md`)
                 .then((res) => {
                     if (!res.ok) {
                         setMarkdown("Unable to load the template from the given URL.");
@@ -99,7 +100,9 @@ function EditorPageContent() {
 
     return (
         <div className="w-full h-full min-h-screen bg-gray-100">
-            <div className="main-content gap-3 pr-[310px] h-full">
+            <MobileScreenWarning/>
+
+            <div className="main-content hidden md:block gap-3 pr-[310px] h-full">
                 <div className="flex justify-center items-start w-full h-screen">
                     <Editor markdown={markdown} onChangeAction={setMarkdown}/>
                     <Preview content={markdown} theme={theme} font={font} previewContainerRef={previewContainerRef}/>
