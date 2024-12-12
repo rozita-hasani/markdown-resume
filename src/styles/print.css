@@ -4,6 +4,12 @@
         border: none !important;
         margin: 0 !important;
         padding: 0 !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    * {
+        background: transparent !important;
+        box-shadow: none !important;
     }
 
     html, body {
@@ -26,7 +32,7 @@
     .previewContainer {
         width: 100% !important;
         border: none !important;
-        background: white;
+        background: white !important;
         height: auto !important;
         margin: 0 !important;
         page-break-inside: auto;
