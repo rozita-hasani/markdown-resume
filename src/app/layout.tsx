@@ -6,6 +6,7 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
         <html lang="en">
         <head>
             <script async type="module" src={"/google-analytics.js"}></script>
+            <link rel="icon" href="/logo.svg" type="image/png"/>
         </head>
         <body className='bg-gray-50 font-sans'>
         {children}
