@@ -1,22 +1,23 @@
 import {Metadata} from "next";
 import React from "react";
+import {baseUrl} from "@/app/blog/utils";
 
 export const metadata: Metadata = {
-    title: "Resume Markdown Editor - Create and Customize Your Resume",
-    description: "Write and customize your professional resume using our intuitive Markdown editor. Choose themes, adjust styles, and export effortlessly.",
+    title: "Markdown Resume - Create Professional Resumes with Markdown",
+    description: "Create a professional resume by writing in Markdown, using our simple editor, and choosing from various templates to export your resume easily.",
     keywords: [
-        "Resume Editor",
-        "Markdown Resume Editor",
-        "Customize Resume",
-        "Professional Templates",
-        "Markdown Editor",
-        "Export PDF Resume",
+        "Resume Builder",
+        "Markdown Resume",
+        "Export Resume as PDF",
+        "Professional Resume Templates",
+        "Next.js Resume App",
     ].join(", "),
     openGraph: {
-        title: "Resume Markdown Editor - Create and Customize Your Resume",
-        description: "Write and customize your professional resume using Markdown. Choose from themes, adjust styles, and export as PDF with ease.",
+        title: "Markdown Resume - Create Professional Resumes with Markdown",
+        description: "Write your resume in Markdown, edit it easily, choose a professional template, and export it as a PDF. Try our Resume Builder today!",
         type: "website",
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/editor`,
+        url: `${baseUrl}`,
+        images: `${baseUrl}/screenshots/landing-image.png`,
         locale: "en_US",
     },
 };
