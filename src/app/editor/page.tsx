@@ -38,20 +38,23 @@ function EditorPageContent() {
 
     // Fetch the template and set the markdown state
     useEffect(() => {
-        if (template) {
-            fetch(`/templates/${template}.md`)
-                .then((res) => {
-                    if (!res.ok) {
-                        setMarkdown("Unable to load the template from the given URL.");
-                    } else {
-                        res.text().then(setMarkdown);
-                        applyThemeSettings(template)
-                    }
-                })
-                .catch(() => {
-                    setMarkdown("Unable to load the template from the given URL.");
-                });
-        }
+        const defaultTemplate = "mashhad";
+        const selectedTemplate = template || defaultTemplate;
+
+        fetch(`/templates/${selectedTemplate}.md`)
+            .then((res) => {
+                if (!res.ok) {
+                    setMarkdown("Unable to load the default resume template.");
+                } else {
+                    res.text().then((content) => {
+                        setMarkdown(content);
+                        applyThemeSettings(defaultTemplate);
+                    });
+                }
+            })
+            .catch(() => {
+                setMarkdown("Unable to load the default resume template.");
+            });
     }, [template]);
 
     useEffect(() => {
