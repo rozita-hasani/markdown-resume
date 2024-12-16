@@ -53,4 +53,8 @@
     @page {
          margin: 24px 0;
     }
+
+    .mobile-warning {
+        display: none !important;
+    }
 }
