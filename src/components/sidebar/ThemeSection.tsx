@@ -30,11 +30,10 @@ export function ThemeSection({onThemeChange, selectedTheme}: ThemeSectionProps) 
     return (
         <SidebarSection title="Theme">
             <div className='relative w-full'>
-                <label className="block text-sm font-medium py-3 text-[#5f6368]">Select Theme</label>
                 <select
                     value={theme}
                     onChange={handleThemeChange}
-                    className="w-full appearance-none text-sm text-[#3c4043] bg-gray-100 hover:bg-gray-200 hover:text-[#63676e] pl-3 pr-9 py-4 rounded-lg"
+                    className="mt-2 w-full appearance-none text-sm text-[#3c4043] bg-gray-100 hover:bg-gray-200 hover:text-[#63676e] pl-3 pr-9 py-4 rounded-lg"
                     style={{fontFamily: "'Inter', 'Noto Sans SC', sans-serif"}}>
                     {Object.entries(ThemeList).map(([key, value]) => (
                         <option key={key} value={value}>{value}</option>

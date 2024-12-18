@@ -1,6 +1,6 @@
 "use client";
 
-import {useState, useRef, useEffect, Suspense} from "react";
+import {useRef, useEffect, Suspense} from "react";
 import Editor from "@/components/editor/Editor";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Preview from "@/components/preview/Preview";
@@ -9,6 +9,7 @@ import '../../styles/globals.css'
 import {useSearchParams} from "next/navigation";
 import {loadFont} from "@/lib/fontUtils";
 import MobileScreenWarning from "@/components/MobileScreenWarning";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 export default function EditorPage() {
     return (
@@ -22,40 +23,47 @@ function EditorPageContent() {
     const searchParams = useSearchParams();
     const template = searchParams.get("template");
 
-    const [markdown, setMarkdown] = useState<string>();
-    const [theme, setTheme] = useState<string>(template ?? "tehran");
-    const [font, setFont] = useState<string>(themes[theme]?.fontName ?? 'Open Sans');
-    const [fontScale, setFontScale] = useState<number>(themes[theme]?.fontScale ?? 1);
-    const [headingScale, setHeadingScale] = useState<number>(themes[theme]?.headingScale ?? 1);
-    const [lineHeightScale, setLineHeightScale] = useState<number>(themes[theme]?.lineHeightScale ?? 1.5);
-    const [xPaddingScale, setXPaddingScale] = useState<number>(themes[theme]?.xPaddingScale ?? 20);
-    const [yPaddingScale, setYPaddingScale] = useState<number>(themes[theme]?.yPaddingScale ?? 20);
-    const [headerColor, setHeaderColor] = useState<string>(themes[theme]?.headerColor ?? '#000');
-    const [textColor, setTextColor] = useState<string>(themes[theme]?.textColor ?? '#000');
-    const [linkColor, setLinkColor] = useState<string>(themes[theme]?.linkColor ?? '#1a73e8');
+    const [markdown, setMarkdown] = useLocalStorage<string>("MARKDOWN_CONTENT", "");
+    const [theme, setTheme] = useLocalStorage<string>("SELECTED_THEME", "tehran");
+
+    const currentTheme = themes[theme];
+
+    const [font, setFont] = useLocalStorage<string>("FONT", currentTheme.fontName ?? 'Open Sans');
+    const [headingScale, setHeadingScale] = useLocalStorage<number>("HEADING_SCALE", currentTheme.headingScale ?? 1);
+    const [fontScale, setFontScale] = useLocalStorage<number>("FONT_SCALE", currentTheme.fontScale ?? 1);
+    const [lineHeightScale, setLineHeightScale] = useLocalStorage<number>("LINE_HEIGHT_SCALE", currentTheme.lineHeightScale ?? 1.5);
+    const [xPaddingScale, setXPaddingScale] = useLocalStorage<number>("X_PADDING_SCALE", currentTheme.xPaddingScale ?? 20);
+    const [yPaddingScale, setYPaddingScale] = useLocalStorage<number>("Y_PADDING_SCALE", currentTheme.yPaddingScale ?? 20);
+    const [headerColor, setHeaderColor] = useLocalStorage<string>("HEADER_COLOR", currentTheme.headerColor ?? '#000');
+    const [textColor, setTextColor] = useLocalStorage<string>("TEXT_COLOR", currentTheme.textColor ?? '#000');
+    const [linkColor, setLinkColor] = useLocalStorage<string>("LINK_COLOR", currentTheme.linkColor ?? '#1a73e8');
 
     const previewContainerRef = useRef<HTMLDivElement | null>(null);
 
     // Fetch the template and set the markdown state
     useEffect(() => {
         const defaultTemplate = "mashhad";
-        const selectedTemplate = template || defaultTemplate;
 
-        fetch(`/templates/${selectedTemplate}.md`)
-            .then((res) => {
-                if (!res.ok) {
+        // Only fetch if localStorage is empty
+        if (!markdown) {
+            const selectedTemplate = template || defaultTemplate;
+
+            fetch(`/templates/${selectedTemplate}.md`)
+                .then((res) => {
+                    if (!res.ok) {
+                        setMarkdown("Unable to load the default resume template.");
+                    } else {
+                        res.text().then((content) => {
+                            setMarkdown(content);
+                            applyThemeSettings(defaultTemplate);
+                        });
+                    }
+                })
+                .catch(() => {
                     setMarkdown("Unable to load the default resume template.");
-                } else {
-                    res.text().then((content) => {
-                        setMarkdown(content);
-                        applyThemeSettings(defaultTemplate);
-                    });
-                }
-            })
-            .catch(() => {
-                setMarkdown("Unable to load the default resume template.");
-            });
-    }, [template]);
+                });
+        }
+    }, [template, markdown]);
 
     useEffect(() => {
         loadFont(fonts[font]);
