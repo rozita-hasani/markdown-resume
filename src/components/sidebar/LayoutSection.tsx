@@ -1,7 +1,8 @@
 'use client';
 
 import {SidebarSection} from "@/components/sidebar/SidebarSection";
-import {Slider} from "@/components/sidebar/Slider";
+import {SliderComponent} from "@/components/sidebar/SliderComponent";
+import {Layout} from "lucide-react";
 
 interface LayoutSectionProps {
     onLineHeightChangeAction: (height: number) => void;
@@ -14,19 +15,21 @@ interface LayoutSectionProps {
 
 export function LayoutSection({onLineHeightChangeAction, onXPaddingChangeAction, onYPaddingChangeAction, lineHeightScale, xPaddingScale, yPaddingScale}: LayoutSectionProps) {
     return (
-        <SidebarSection title="Layout">
-            <Slider label="Line Height" value={lineHeightScale} min={1.0} max={3.0} step={0.1}
-                onChange={(e) => onLineHeightChangeAction(parseFloat(e.target.value))}
-                currentValue={lineHeightScale.toString()}
-            />
-            <Slider label="X Padding" value={xPaddingScale} min={0} max={48} step={2}
-                onChange={(e) => onXPaddingChangeAction(parseFloat(e.target.value))}
-                currentValue={`${xPaddingScale}px`}
-            />
-            <Slider label="Y Padding" value={yPaddingScale} min={0} max={48} step={2}
-                onChange={(e) => onYPaddingChangeAction(parseFloat(e.target.value))}
-                currentValue={`${yPaddingScale}px`}
-            />
+        <SidebarSection title="Layout" icon={<Layout className="h-4 w-4" />}>
+            <div className='pt-2'>
+                <SliderComponent label="Line Height" value={lineHeightScale} min={1.0} max={3.0} step={0.1}
+                                 onChange={(e) => onLineHeightChangeAction(e)}
+                                 currentValue={lineHeightScale.toString()}
+                />
+                <SliderComponent label="X Padding" value={xPaddingScale} min={0} max={48} step={2}
+                                 onChange={(e) => onXPaddingChangeAction(e)}
+                                 currentValue={`${xPaddingScale}px`}
+                />
+                <SliderComponent label="Y Padding" value={yPaddingScale} min={0} max={48} step={2}
+                                 onChange={(e) => onYPaddingChangeAction(e)}
+                                 currentValue={`${yPaddingScale}px`}
+                />
+            </div>
         </SidebarSection>
     );
 }

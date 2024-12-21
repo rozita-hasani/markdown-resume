@@ -33,14 +33,14 @@ interface SidebarProps {
 
 const Sidebar = ({font, setFont, handlePrint, onThemeChange, onFontSizeChange, onYPaddingChange, onXPaddingChange, onLineHeightChange, onFontChange, fontScale, lineHeightScale, headingScale, onHeadingChange, xPaddingScale, yPaddingScale, selectedTheme, headerColor, setHeaderColor, textColor, setTextColor, linkColor, setLinkColor,}: SidebarProps) => {
     return (
-        <div className="sidebar hidden md:block flex-col justify-between fixed right-0 top-0 bottom-0 max-w-[300px] w-full bg-white py-6 ml-10 border border-gray-200 overflow-auto">
+        <div className="sidebar hidden md:block flex-col justify-between fixed right-0 top-0 bottom-0 max-w-[320px] w-full bg-white ml-10 border border-gray-200 overflow-auto">
             <div>
+                <SidebarButtons handlePrint={handlePrint}/>
                 <ThemeSection onThemeChange={onThemeChange} selectedTheme={selectedTheme}/>
                 <FontSection font={font} setFontAction={setFont} onFontChangeAction={onFontChange} onFontSizeChangeAction={onFontSizeChange} fontScale={fontScale} headingScale={headingScale} onHeadingChangeAction={onHeadingChange}/>
                 <LayoutSection onLineHeightChangeAction={onLineHeightChange} onXPaddingChangeAction={onXPaddingChange} onYPaddingChangeAction={onYPaddingChange} lineHeightScale={lineHeightScale} xPaddingScale={xPaddingScale} yPaddingScale={yPaddingScale}/>
                 <ColorSection headerColor={headerColor} setHeaderColorAction={setHeaderColor} linkColor={linkColor} setLinkColorAction={setLinkColor} textColor={textColor} setTextColorAction={setTextColor}/>
             </div>
-            <SidebarButtons handlePrint={handlePrint}/>
         </div>
     );
 };

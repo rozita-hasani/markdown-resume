@@ -30,8 +30,8 @@ export default function Editor({markdown, onChangeAction}: EditorProps) {
     };
 
     return (
-        <div className="editor m-4 relative w-1/2 custom-scrollbar overflow-auto bg-white border border-gray-200"
-            style={{height: 'calc(100vh - 32px)'}}>
+        <div className="editor h-full relative w-1/2 custom-scrollbar overflow-auto bg-white border border-gray-200"
+           >
             <MDXEditor
                 ref={editorRef}
                 markdown={markdown ?? ''}

@@ -1,13 +1,19 @@
 import React from "react";
 
-interface SidebarSection {
+interface SidebarSectionProps {
+    title: string;
+    icon: React.ReactNode;
     children: React.ReactNode;
-    title: string
 }
 
-export const SidebarSection = ({children, title}: SidebarSection) => (
-    <div className="mb-4 pb-4 border-b border-gray-200 px-4">
-        <h3 className="text-base font-medium">{title}</h3>
-        {children}
-    </div>
-);
+export function SidebarSection({ title, icon, children }: SidebarSectionProps) {
+    return (
+        <div className="border-b last:border-b-0">
+            <div className="flex items-center gap-2 px-4 py-2">
+                {icon}
+                <h2 className="font-medium">{title}</h2>
+            </div>
+            <div className="px-4">{children}</div>
+        </div>
+    );
+}

@@ -2,8 +2,8 @@
 
 import React, {useCallback } from "react";
 import { SidebarSection } from "@/components/sidebar/SidebarSection";
-import { ChevronDown } from "lucide-react";
-import { Slider } from "@/components/sidebar/Slider";
+import {ChevronDown, Type} from "lucide-react";
+import { SliderComponent } from "@/components/sidebar/SliderComponent";
 import {fonts} from "@/lib/constants";
 import {loadFont} from "@/lib/fontUtils";
 
@@ -28,9 +28,9 @@ export function FontSection({ onFontChangeAction, onFontSizeChangeAction, font, 
     }, [onFontChangeAction, setFontAction]);
 
     return (
-        <SidebarSection title="Font">
+        <SidebarSection title="Typography" icon={<Type className="h-4 w-4" />}>
             <div className='relative w-full mb-4'>
-                <label className="block text-sm font-medium py-3 text-[#5f6368]">Name</label>
+                <label className="block text-sm font-medium py-2 text-[#5f6368]">Name</label>
                 <select
                     value={font}
                     onChange={handleFontChange}
@@ -45,23 +45,23 @@ export function FontSection({ onFontChangeAction, onFontSizeChangeAction, font, 
                 <ChevronDown className="w-4 h-4 absolute right-3 top-3/4 transform -translate-y-1/2 text-[#3c4043]"/>
             </div>
 
-            <Slider
+            <SliderComponent
                 label="Size"
                 value={fontScale}
                 min={0.5}
                 max={3.0}
                 step={0.1}
-                onChange={(e) => onFontSizeChangeAction(parseFloat(e.target.value))}
+                onChange={(e) => onFontSizeChangeAction(e)}
                 currentValue={`${(fontScale * baseFontSize).toFixed(1)}px`}
             />
 
-            <Slider
+            <SliderComponent
                 label="Heading Scale"
                 value={headingScale}
                 min={0.5}
                 max={3.0}
                 step={0.1}
-                onChange={(e) => onHeadingChangeAction(parseFloat(e.target.value))}
+                onChange={(e) => onHeadingChangeAction(e)}
                 currentValue={headingScale.toFixed(1)}
             />
         </SidebarSection>
