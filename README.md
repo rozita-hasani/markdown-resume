@@ -1,5 +1,7 @@
 # Markdown Resume
 
+![Samle](/public/screenshots/sample.png)
+
 ## Introduction
 Markdown Resume is an open-source project that helps users create professional resumes. You write your resume in **markdown format**, and the editor lets you preview, apply different **themes**, customize, and export it as a **PDF**.
 
