@@ -1,6 +1,6 @@
 # John Doe
 **Frontend Developer**  
-Amsterdam, Netherlands | johndoe@example.com | +31 6 12345678 | (https://linkedin.com/in/johndoe)[LinkedIn Profile]
+Amsterdam, Netherlands | johndoe@example.com | +31 6 12345678 | (https://linkedin.com/in/johndoe)[LinkedIn]
 
 ---
 
