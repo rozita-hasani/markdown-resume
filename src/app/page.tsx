@@ -87,7 +87,7 @@ export default function Home() {
                         <p className="text-gray-600 text-lg mt-2">Explore articles on writing resumes, finding jobs, and everything you need to successfully apply for your next opportunity.</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {getBlogPosts().map((post) => (<BlogCard key={post.slug} post={post}/>))}
+                        {getBlogPosts().sort((a, b) => new Date(b.metadata.publishedAt).getTime() - new Date(a.metadata.publishedAt).getTime()).map((post) => (<BlogCard key={post.slug} post={post}/>))}
                     </div>
                 </div>
             </section>
