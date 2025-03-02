@@ -1,5 +1,3 @@
-'use client';
-
 import {ThemeSection} from "@/components/sidebar/ThemeSection";
 import {FontSection} from "@/components/sidebar/FontSection";
 import {LayoutSection} from "@/components/sidebar/LayoutSection";
