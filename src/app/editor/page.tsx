@@ -10,6 +10,7 @@ import {useSearchParams} from "next/navigation";
 import {loadFont} from "@/lib/fontUtils";
 import MobileScreenWarning from "@/components/MobileScreenWarning";
 import useLocalStorage from "@/hooks/useLocalStorage";
+import { TemplateVariables, getDefaultTemplateVariables } from "@/lib/templateEngine";
 
 export default function EditorPage() {
     return (
@@ -23,8 +24,9 @@ function EditorPageContent() {
     const searchParams = useSearchParams();
     const template = searchParams.get("template");
 
-    const [markdown, setMarkdown] = useLocalStorage<string>("MARKDOWN_CONTENT", "");
-    const [theme, setTheme] = useLocalStorage<string>("SELECTED_THEME", "tehran");
+    const [markdown, setMarkdown, markdownLoaded] = useLocalStorage<string>("MARKDOWN_CONTENT", "");
+    const [theme, setTheme, themeLoaded] = useLocalStorage<string>("SELECTED_THEME", "tehran");
+    const [templateVariables, setTemplateVariables, templateVariablesLoaded] = useLocalStorage<TemplateVariables>("TEMPLATE_VARIABLES", getDefaultTemplateVariables());
 
     const currentTheme = themes[theme];
 
@@ -66,7 +68,10 @@ function EditorPageContent() {
     }, [template, markdown]);
 
     useEffect(() => {
-        loadFont(fonts[font]);
+        // Only load fonts on the client side
+        if (typeof window !== 'undefined') {
+            loadFont(fonts[font]);
+        }
     }, [font]);
 
     // Utility function to apply theme settings
@@ -109,6 +114,15 @@ function EditorPageContent() {
         window.print();
     };
 
+    // Show loading state until localStorage is loaded
+    if (!markdownLoaded || !themeLoaded || !templateVariablesLoaded) {
+        return (
+            <div className="w-full h-full min-h-screen bg-gray-100 flex items-center justify-center">
+                <div className="text-gray-600">Loading...</div>
+            </div>
+        );
+    }
+
     return (
         <div className="w-full h-full min-h-screen bg-gray-100">
             <MobileScreenWarning/>
@@ -116,7 +130,7 @@ function EditorPageContent() {
             <div className="main-content hidden md:block gap-3 pr-[310px] h-full">
                 <div className="flex justify-center items-start w-full h-screen">
                     <Editor markdown={markdown} onChangeAction={setMarkdown}/>
-                    <Preview content={markdown} theme={theme} font={font} previewContainerRef={previewContainerRef}/>
+                    <Preview content={markdown} theme={theme} font={font} previewContainerRef={previewContainerRef} templateVariables={templateVariables}/>
                 </div>
             </div>
             <Sidebar
@@ -142,6 +156,9 @@ function EditorPageContent() {
                 setTextColor={setTextColor}
                 linkColor={linkColor}
                 setLinkColor={setLinkColor}
+                markdown={markdown}
+                templateVariables={templateVariables}
+                onTemplateVariablesChange={setTemplateVariables}
             />
         </div>
     );

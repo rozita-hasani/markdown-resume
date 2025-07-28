@@ -115,9 +115,9 @@ function Feature({title, description, icon}: FeatureProps) {
 }
 
 // Template Card Component for Templates Section
-function TemplateCard({template, key}: { template: string, key?: string }) {
+function TemplateCard({template}: { template: string }) {
     return (
-        <a key={key} href={`/editor?template=${template}`}>
+        <a href={`/editor?template=${template}`}>
             <div className="p-2 flex flex-col justify-center md:mx-0 rounded-lg hover:shadow-xl transition cursor-pointer w-fit right-0 left-0 mx-auto">
                 <Image src={`/screenshots/${template}-resume.png`} alt={`${template} Template`} width={300} height={200} className="mb-1 rounded-lg border"/>
                 <span className="block text-[#1a73e8] font-semibold">{ThemeList[template as keyof typeof ThemeList]}</span>

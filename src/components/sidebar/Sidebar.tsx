@@ -3,6 +3,8 @@ import {FontSection} from "@/components/sidebar/FontSection";
 import {LayoutSection} from "@/components/sidebar/LayoutSection";
 import {SidebarButtons} from "@/components/sidebar/SidebarButtons";
 import ColorSection from "@/components/sidebar/ColorSection";
+import {TemplateVariablesSection} from "@/components/sidebar/TemplateVariablesSection";
+import { TemplateVariables } from "@/lib/templateEngine";
 
 interface SidebarProps {
     handlePrint: () => void;
@@ -27,9 +29,12 @@ interface SidebarProps {
     setLinkColor: (color: string) => void;
     font: string;
     setFont: (font: string) => void;
+    markdown: string;
+    templateVariables: TemplateVariables;
+    onTemplateVariablesChange: (variables: TemplateVariables) => void;
 }
 
-const Sidebar = ({font, setFont, handlePrint, onThemeChange, onFontSizeChange, onYPaddingChange, onXPaddingChange, onLineHeightChange, onFontChange, fontScale, lineHeightScale, headingScale, onHeadingChange, xPaddingScale, yPaddingScale, selectedTheme, headerColor, setHeaderColor, textColor, setTextColor, linkColor, setLinkColor,}: SidebarProps) => {
+const Sidebar = ({font, setFont, handlePrint, onThemeChange, onFontSizeChange, onYPaddingChange, onXPaddingChange, onLineHeightChange, onFontChange, fontScale, lineHeightScale, headingScale, onHeadingChange, xPaddingScale, yPaddingScale, selectedTheme, headerColor, setHeaderColor, textColor, setTextColor, linkColor, setLinkColor, markdown, templateVariables, onTemplateVariablesChange}: SidebarProps) => {
     return (
         <div className="sidebar hidden md:block flex-col justify-between fixed right-0 top-0 bottom-0 max-w-[320px] w-full bg-white ml-10 border border-gray-200 overflow-auto">
             <div>
@@ -38,6 +43,11 @@ const Sidebar = ({font, setFont, handlePrint, onThemeChange, onFontSizeChange, o
                 <FontSection font={font} setFontAction={setFont} onFontChangeAction={onFontChange} onFontSizeChangeAction={onFontSizeChange} fontScale={fontScale} headingScale={headingScale} onHeadingChangeAction={onHeadingChange}/>
                 <LayoutSection onLineHeightChangeAction={onLineHeightChange} onXPaddingChangeAction={onXPaddingChange} onYPaddingChangeAction={onYPaddingChange} lineHeightScale={lineHeightScale} xPaddingScale={xPaddingScale} yPaddingScale={yPaddingScale}/>
                 <ColorSection headerColor={headerColor} setHeaderColorAction={setHeaderColor} linkColor={linkColor} setLinkColorAction={setLinkColor} textColor={textColor} setTextColorAction={setTextColor}/>
+                <TemplateVariablesSection 
+                    markdown={markdown}
+                    templateVariables={templateVariables}
+                    onTemplateVariablesChange={onTemplateVariablesChange}
+                />
             </div>
         </div>
     );
