@@ -13,7 +13,7 @@
     font-weight: normal;
     font-size: calc(2.25rem * var(--fontScale) * var(--headingScale, 1));
     margin-top: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .theme.isfahan h2 {
